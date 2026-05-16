@@ -1,0 +1,486 @@
+import 'package:quiz_biblico_5/models/variables_game_model.dart';
+
+class ActsGameMock {
+  List<VariablesGameModel> acts = [
+    VariablesGameModel(
+      id: '1',
+      question: '1 - Quem escreveu o livro de Atos dos Apóstolos?',
+      alternatives1: 'a) Paulo',
+      alternatives2: 'b) Lucas',
+      alternatives3: 'c) Pedro',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Lucas (Atos 1:1)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+    VariablesGameModel(
+      id: '2',
+      question:
+          '2 - Quantos dias Jesus permaneceu com os discípulos após a ressurreição antes de subir ao céu?',
+      alternatives1: 'a) 10 dias',
+      alternatives2: 'b) 40 dias',
+      alternatives3: 'c) 7 dias',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) 40 dias (Atos 1:3)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+    VariablesGameModel(
+      id: '3',
+      question:
+          '3 - Quem foi escolhido para substituir Judas Iscariotes entre os apóstolos?',
+      alternatives1: 'a) Matias',
+      alternatives2: 'b) Barnabé',
+      alternatives3: 'c) José Barsabás',
+      response1:
+          'Resposta correta: a) Matias (Atos 1:26)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+    VariablesGameModel(
+      id: '4',
+      question: '4 - O que aconteceu no dia de Pentecostes?',
+      alternatives1: 'a) Os discípulos falaram em outras línguas',
+      alternatives2: 'b) Jesus apareceu novamente',
+      alternatives3: 'c) O templo foi destruído',
+      response1:
+          'Resposta correta: a) Os discípulos falaram em outras línguas (Atos 2:4)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+    VariablesGameModel(
+      id: '5',
+      question:
+          '5 - Quantas pessoas se converteram após a pregação de Pedro no dia de Pentecostes?',
+      alternatives1: 'a) 5.000',
+      alternatives2: 'b) 3.000',
+      alternatives3: 'c) 1.000',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) 3.000 (Atos 2:41)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+    VariablesGameModel(
+      id: '6',
+      question: '6 - Quem curou o coxo à porta Formosa do templo?',
+      alternatives1: 'a) Pedro e João',
+      alternatives2: 'b) Tiago e André',
+      alternatives3: 'c) Paulo e Barnabé',
+      response1:
+          'Resposta correta: a) Pedro e João (Atos 3:6-7)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+    VariablesGameModel(
+      id: '7',
+      question: '7 - Quem foi o primeiro mártir cristão?',
+      alternatives1: 'a) Estêvão',
+      alternatives2: 'b) Tiago',
+      alternatives3: 'c) Filipe',
+      response1:
+          'Resposta correta: a) Estêvão (Atos 7:59-60)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+    VariablesGameModel(
+      id: '8',
+      question: '8 - Quem consentiu na morte de Estêvão?',
+      alternatives1: 'a) Herodes',
+      alternatives2: 'b) Saulo',
+      alternatives3: 'c) Caifás',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Saulo (Atos 8:1)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+    VariablesGameModel(
+      id: '9',
+      question: '9 - Quem foi batizado por Filipe no caminho de Gaza?',
+      alternatives1: 'a) Um eunuco etíope',
+      alternatives2: 'b) Simão, o mago',
+      alternatives3: 'c) Cornélio',
+      response1:
+          'Resposta correta: a) Um eunuco etíope (Atos 8:36-38)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+    VariablesGameModel(
+      id: '10',
+      question: '10 - Onde Saulo teve o encontro com Jesus?',
+      alternatives1: 'a) Estrada de Jerusalém',
+      alternatives2: 'b) Estrada de Damasco',
+      alternatives3: 'c) Estrada de Jericó',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Estrada de Damasco (Atos 9:3-5)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+    VariablesGameModel(
+      id: '11',
+      question:
+          '11 - Quem foi escolhido para substituir Judas entre os apóstolos?',
+      alternatives1: 'a) Barnabé',
+      alternatives2: 'b) Matias',
+      alternatives3: 'c) Silas',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Matias (Atos 1:26)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '12',
+      question: '12 - Em que dia o Espírito Santo desceu sobre os discípulos?',
+      alternatives1: 'a) Dia da Páscoa',
+      alternatives2: 'b) Dia de Pentecostes',
+      alternatives3: 'c) Dia da Expiação',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Dia de Pentecostes (Atos 2:1-4)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '13',
+      question:
+          '13 - Quantas pessoas foram batizadas após a pregação de Pedro no Pentecostes?',
+      alternatives1: 'a) 500',
+      alternatives2: 'b) 2.000',
+      alternatives3: 'c) 3.000',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3:
+          'Resposta correta: c) 3.000 (Atos 2:41)\n\n Você Ganhou 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/balloons.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '14',
+      question: '14 - Quem curou o coxo à porta do templo chamado Formosa?',
+      alternatives1: 'a) Pedro e João',
+      alternatives2: 'b) Paulo e Barnabé',
+      alternatives3: 'c) Estêvão e Filipe',
+      response1:
+          'Resposta correta: a) Pedro e João (Atos 3:6-7)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '15',
+      question: '15 - Quem foi o primeiro mártir da igreja primitiva?',
+      alternatives1: 'a) Estêvão',
+      alternatives2: 'b) Tiago',
+      alternatives3: 'c) Barnabé',
+      response1:
+          'Resposta correta: a) Estêvão (Atos 7:59-60)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '16',
+      question: '16 - Quem perseguiu a igreja antes de se converter?',
+      alternatives1: 'a) Saulo',
+      alternatives2: 'b) Barnabé',
+      alternatives3: 'c) Filipe',
+      response1:
+          'Resposta correta: a) Saulo (Atos 8:1-3)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '17',
+      question: '17 - Quem batizou o eunuco etíope?',
+      alternatives1: 'a) Pedro',
+      alternatives2: 'b) Filipe',
+      alternatives3: 'c) João',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Filipe (Atos 8:38)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '18',
+      question: '18 - Onde Saulo teve sua conversão?',
+      alternatives1: 'a) Jerusalém',
+      alternatives2: 'b) Damasco',
+      alternatives3: 'c) Antioquia',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Damasco (Atos 9:3-6)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '19',
+      question: '19 - Quem orou por Saulo para que recuperasse a visão?',
+      alternatives1: 'a) Barnabé',
+      alternatives2: 'b) Ananias',
+      alternatives3: 'c) Silas',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Ananias (Atos 9:17-18)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '20',
+      question: '20 - Quem foi ressuscitada por Pedro em Jope?',
+      alternatives1: 'a) Lídia',
+      alternatives2: 'b) Tabita (Dorcas)',
+      alternatives3: 'c) Priscila',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Tabita (Dorcas) (Atos 9:36-40)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '21',
+      question: '21 - Quem foi batizado por Pedro na casa de Cornélio?',
+      alternatives1: 'a) Apenas Cornélio',
+      alternatives2: 'b) Cornélio e toda sua casa',
+      alternatives3: 'c) Nenhum deles',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Cornélio e toda sua casa (Atos 10:48)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '22',
+      question: '22 - Quem ajudou Paulo em sua primeira viagem missionária?',
+      alternatives1: 'a) Barnabé',
+      alternatives2: 'b) Estêvão',
+      alternatives3: 'c) Tiago',
+      response1:
+          'Resposta correta: a) Barnabé (Atos 13:2-3)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '23',
+      question: '23 - Quem foi preso em Filipos e libertado por um terremoto?',
+      alternatives1: 'a) Paulo e Silas',
+      alternatives2: 'b) Pedro e João',
+      alternatives3: 'c) Barnabé e Tiago',
+      response1:
+          'Resposta correta: a) Paulo e Silas (Atos 16:25-26)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '24',
+      question:
+          '24 - Em qual cidade Paulo ficou preso por dois anos pregando o evangelho?',
+      alternatives1: 'a) Roma',
+      alternatives2: 'b) Cesareia',
+      alternatives3: 'c) Antioquia',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Cesareia (Atos 24:27)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '25',
+      question:
+          '25 - Quem curou um paralítico em Listra, e as pessoas pensaram que eles eram deuses?',
+      alternatives1: 'a) Paulo e Barnabé',
+      alternatives2: 'b) Pedro e João',
+      alternatives3: 'c) Tiago e João',
+      response1:
+          'Resposta correta: a) Paulo e Barnabé (Atos 14:8-11)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '26',
+      question: '26 - Quem foi liberto da prisão por um anjo em Filipos?',
+      alternatives1: 'a) Paulo',
+      alternatives2: 'b) Silas',
+      alternatives3: 'c) Paulo e Silas',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3:
+          'Resposta correta: c) Paulo e Silas (Atos 16:26)\n\n Você Ganhou 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/balloons.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '27',
+      question:
+          '27 - Quem era o centurião romano que recebeu Paulo com bondade em Roma?',
+      alternatives1: 'a) Cornélio',
+      alternatives2: 'b) Cláudio Lísias',
+      alternatives3: 'c) Tito',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Cláudio Lísias (Atos 23:26)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '28',
+      question:
+          '28 - Quem ajudou Paulo e Silas em Listra e Derbe em suas viagens missionárias?',
+      alternatives1: 'a) Barnabé e João Marcos',
+      alternatives2: 'b) Timóteo',
+      alternatives3: 'c) Ananias',
+      response1:
+          'Resposta correta: a) Barnabé e João Marcos (Atos 14:8-20)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '29',
+      question:
+          '29 - Quem encontrou Paulo após ele ter sido naufragado em Malta?',
+      alternatives1: 'a) Publius',
+      alternatives2: 'b) Cláudio',
+      alternatives3: 'c) Tito',
+      response1:
+          'Resposta correta: a) Publius (Atos 28:7)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 20 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '30',
+      question:
+          '30 - Quanto tempo Paulo passou preso em Roma pregando o evangelho?',
+      alternatives1: 'a) 1 ano',
+      alternatives2: 'b) 2 anos',
+      alternatives3: 'c) 3 anos',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) 2 anos (Atos 28:30)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+  ];
+}

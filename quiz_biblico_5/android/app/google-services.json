@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "910023683947",
+    "project_id": "quiz-biblico-34464",
+    "storage_bucket": "quiz-biblico-34464.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910023683947:android:e3bd41c075b0500d82e62e",
+        "android_client_info": {
+          "package_name": "br.com.lila.quiz_biblico"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910023683947-2fd29k27ifdjggdna4h6br46rtkm7mlq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu4HcXrje-kiNpMmnq17unnvApZw-9bWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910023683947-2fd29k27ifdjggdna4h6br46rtkm7mlq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910023683947:android:10b549080013d02782e62e",
+        "android_client_info": {
+          "package_name": "br.com.lila.quiz_biblico"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910023683947-2fd29k27ifdjggdna4h6br46rtkm7mlq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu4HcXrje-kiNpMmnq17unnvApZw-9bWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910023683947-2fd29k27ifdjggdna4h6br46rtkm7mlq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

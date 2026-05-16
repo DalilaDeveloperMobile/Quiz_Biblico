@@ -1,0 +1,486 @@
+import 'package:quiz_biblico_5/models/variables_game_model.dart';
+
+class EphesiansGameMock {
+  List<VariablesGameModel> ephesians = [
+    VariablesGameModel(
+      id: '1',
+      question: '1 - Quem escreveu a carta aos Efésios?',
+      alternatives1: 'a) Paulo',
+      alternatives2: 'b) Pedro',
+      alternatives3: 'c) João',
+      response1:
+          'Resposta correta: a) Paulo (Efésios 1:1)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '2',
+      question: '2 - Para quem Paulo escreveu a carta?',
+      alternatives1: 'a) Aos Romanos',
+      alternatives2: 'b) Aos Efésios',
+      alternatives3: 'c) Aos Coríntios',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Aos Efésios (Efésios 1:1)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '3',
+      question: '3 - Como Paulo se apresenta no início da carta?',
+      alternatives1: 'a) Apóstolo de Cristo Jesus',
+      alternatives2: 'b) Servo de Moisés',
+      alternatives3: 'c) Discípulo de Pedro',
+      response1:
+          'Resposta correta: a) Apóstolo de Cristo Jesus (Efésios 1:1)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '4',
+      question: '4 - Onde as bênçãos espirituais são encontradas?',
+      alternatives1: 'a) Na terra',
+      alternatives2: 'b) Nos lugares celestiais em Cristo',
+      alternatives3: 'c) No templo',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Nos lugares celestiais em Cristo (Efésios 1:3)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '5',
+      question: '5 - Quando Deus nos escolheu em Cristo?',
+      alternatives1: 'a) Antes da fundação do mundo',
+      alternatives2: 'b) No tempo de Paulo',
+      alternatives3: 'c) No Éden',
+      response1:
+          'Resposta correta: a) Antes da fundação do mundo (Efésios 1:4)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '6',
+      question: '6 - Em quem temos redenção pelo sangue?',
+      alternatives1: 'a) Em Moisés',
+      alternatives2: 'b) Em Cristo',
+      alternatives3: 'c) Em Abraão',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Em Cristo (Efésios 1:7)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '7',
+      question: '7 - Qual é o selo da promessa para os crentes?',
+      alternatives1: 'a) O Espírito Santo',
+      alternatives2: 'b) O sangue dos sacrifícios',
+      alternatives3: 'c) A circuncisão',
+      response1:
+          'Resposta correta: a) O Espírito Santo (Efésios 1:13)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '8',
+      question: '8 - Quem é a cabeça da igreja?',
+      alternatives1: 'a) O Papa',
+      alternatives2: 'b) Cristo',
+      alternatives3: 'c) Paulo',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Cristo (Efésios 1:22)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '9',
+      question: '9 - Como estávamos antes de Cristo?',
+      alternatives1: 'a) Mortos em delitos e pecados',
+      alternatives2: 'b) Santos e irrepreensíveis',
+      alternatives3: 'c) Vivendo em justiça',
+      response1:
+          'Resposta correta: a) Mortos em delitos e pecados (Efésios 2:1)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '10',
+      question: '10 - Pela graça sois salvos mediante a quê?',
+      alternatives1: 'a) Obras',
+      alternatives2: 'b) Fé',
+      alternatives3: 'c) Sacrifícios',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Fé (Efésios 2:8)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+    VariablesGameModel(
+      id: '11',
+      question: '11 - Quem é a nossa paz que fez de dois povos um só?',
+      alternatives1: 'a) Cristo',
+      alternatives2: 'b) Paulo',
+      alternatives3: 'c) Moisés',
+      response1:
+          'Resposta correta: a) Cristo (Efésios 2:14)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '12',
+      question:
+          '12 - Em quem todo edifício cresce para ser templo santo no Senhor?',
+      alternatives1: 'a) Em Pedro',
+      alternatives2: 'b) Em Cristo',
+      alternatives3: 'c) Em Paulo',
+      response1: 'Você Perdeu 20 Pontos!',
+      response2:
+          'Resposta correta: b) Em Cristo (Efésios 2:21)\n\n Você Ganhou 10 Pontos!',
+      response3: 'Você Perdeu 10 Pontos!',
+      alternatives1Imagem: 'images/sad.png',
+      alternatives2Imagem: 'images/balloons.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '13',
+      question: '13 - A quem foi revelado o mistério de Cristo?',
+      alternatives1: 'a) Aos apóstolos e profetas',
+      alternatives2: 'b) Aos reis da terra',
+      alternatives3: 'c) Aos fariseus',
+      response1:
+          'Resposta correta: a) Aos apóstolos e profetas (Efésios 3:5)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '14',
+      question: '14 - Como Paulo se considerava em relação a todos os santos?',
+      alternatives1: 'a) O menor de todos',
+      alternatives2: 'b) O maior de todos',
+      alternatives3: 'c) Igual a todos',
+      response1:
+          'Resposta correta: a) O menor de todos (Efésios 3:8)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '15',
+      question: '15 - O que Cristo habita nos nossos corações mediante a fé?',
+      alternatives1: 'a) Amor',
+      alternatives2: 'b) Força',
+      alternatives3: 'c) Sabedoria',
+      response1:
+          'Resposta correta: a) Amor (Efésios 3:17)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '16',
+      question: '16 - Há um só corpo e um só...?',
+      alternatives1: 'a) Espírito',
+      alternatives2: 'b) Anjo',
+      alternatives3: 'c) Profeta',
+      response1:
+          'Resposta correta: a) Espírito (Efésios 4:4)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '17',
+      question: '17 - Quem deu dons aos homens quando subiu ao alto?',
+      alternatives1: 'a) Cristo',
+      alternatives2: 'b) Elias',
+      alternatives3: 'c) Davi',
+      response1:
+          'Resposta correta: a) Cristo (Efésios 4:8)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '18',
+      question: '18 - Quais ministérios Cristo concedeu à igreja?',
+      alternatives1: 'a) Apóstolos, profetas, evangelistas, pastores e mestres',
+      alternatives2: 'b) Reis, sacerdotes e juízes',
+      alternatives3: 'c) Levitas, escribas e fariseus',
+      response1:
+          'Resposta correta: a) Apóstolos, profetas, evangelistas, pastores e mestres (Efésios 4:11)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '19',
+      question: '19 - Em que devemos falar a verdade?',
+      alternatives1: 'a) Em amor',
+      alternatives2: 'b) Em raiva',
+      alternatives3: 'c) Em orgulho',
+      response1:
+          'Resposta correta: a) Em amor (Efésios 4:15)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '20',
+      question: '20 - Não entristeçais o quê?',
+      alternatives1: 'a) O Espírito Santo',
+      alternatives2: 'b) O próximo',
+      alternatives3: 'c) O coração',
+      response1:
+          'Resposta correta: a) O Espírito Santo (Efésios 4:30)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '21',
+      question: '21 - Sede imitadores de quem?',
+      alternatives1: 'a) De Deus',
+      alternatives2: 'b) De Paulo',
+      alternatives3: 'c) Dos profetas',
+      response1:
+          'Resposta correta: a) De Deus (Efésios 5:1)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '22',
+      question: '22 - Como devemos andar?',
+      alternatives1: 'a) Em amor',
+      alternatives2: 'b) Em trevas',
+      alternatives3: 'c) Em murmuração',
+      response1:
+          'Resposta correta: a) Em amor (Efésios 5:2)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '23',
+      question: '23 - O que não deve ser mencionado entre os santos?',
+      alternatives1: 'a) Fornicação e impureza',
+      alternatives2: 'b) Louvor e gratidão',
+      alternatives3: 'c) Oração e jejum',
+      response1:
+          'Resposta correta: a) Fornicação e impureza (Efésios 5:3)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '24',
+      question: '24 - Não vos embriagueis com vinho, mas enchei-vos de quê?',
+      alternatives1: 'a) Espírito Santo',
+      alternatives2: 'b) Conhecimento',
+      alternatives3: 'c) Sabedoria humana',
+      response1:
+          'Resposta correta: a) Espírito Santo (Efésios 5:18)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '25',
+      question: '25 - Quem deve amar a esposa como a si mesmo?',
+      alternatives1: 'a) O marido',
+      alternatives2: 'b) O vizinho',
+      alternatives3: 'c) O filho',
+      response1:
+          'Resposta correta: a) O marido (Efésios 5:28)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '26',
+      question: '26 - Quem deve obedecer aos pais no Senhor?',
+      alternatives1: 'a) Filhos',
+      alternatives2: 'b) Esposas',
+      alternatives3: 'c) Servos',
+      response1:
+          'Resposta correta: a) Filhos (Efésios 6:1)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '27',
+      question: '27 - Qual é o primeiro mandamento com promessa?',
+      alternatives1: 'a) Honrar pai e mãe',
+      alternatives2: 'b) Não matarás',
+      alternatives3: 'c) Guardar o sábado',
+      response1:
+          'Resposta correta: a) Honrar pai e mãe (Efésios 6:2)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '28',
+      question: '28 - Contra quem não temos luta?',
+      alternatives1: 'a) Carne e sangue',
+      alternatives2: 'b) Principados e potestades',
+      alternatives3: 'c) Hóspedes e vizinhos',
+      response1:
+          'Resposta correta: a) Carne e sangue (Efésios 6:12)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '29',
+      question: '29 - Qual é a espada do Espírito?',
+      alternatives1: 'a) A Palavra de Deus',
+      alternatives2: 'b) O jejum',
+      alternatives3: 'c) O amor',
+      response1:
+          'Resposta correta: a) A Palavra de Deus (Efésios 6:17)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+
+    VariablesGameModel(
+      id: '30',
+      question:
+          '30 - Quem foi enviado por Paulo para consolar os corações dos efésios?',
+      alternatives1: 'a) Tíquico',
+      alternatives2: 'b) Timóteo',
+      alternatives3: 'c) Tito',
+      response1:
+          'Resposta correta: a) Tíquico (Efésios 6:21-22)\n\n Você Ganhou 10 Pontos!',
+      response2: 'Você Perdeu 10 Pontos!',
+      response3: 'Você Perdeu 20 Pontos!',
+      alternatives1Imagem: 'images/balloons.png',
+      alternatives2Imagem: 'images/sad.png',
+      alternatives3Imagem: 'images/sad.png',
+      isSelectNamber: false,
+    ),
+  ];
+}

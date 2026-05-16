@@ -1,0 +1,150 @@
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book_name_game_data/mock_book_name_game_data.dart';
+
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book1_genesis_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book2_exodus_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book3_leviticus_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book4_numbers_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book5_deuteronomy_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book6_josue_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book7_judges_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book8_ruth_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book9_1samuel_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book10_2samuel_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book11_1kings_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book12_2kings_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book13_1chronicles_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book14_2chronicles_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book15_ezra_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book16_nehemiah_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book17_ester_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book18_job_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book19_psalms_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book20_proverbs_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book21_ecclesiastes_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book22_songs_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book23_isaiah_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book24_jeremiah_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book25_lamentations_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book26_ezequiel_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book27_daniel_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book28_hosea_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book29_joel_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book30_amos_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book31_obadiah_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book32_jonah_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book33_micah_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book34_no_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book35_habakkuk_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book36_zephanies_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book37_haggai_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book38_zechariah_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book39_malachi_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book40_mateus_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book41_frames_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book42_lucas_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book43_john_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book44_acts_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book45_romans_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book46_1corinthians_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book47_2corinthians_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book48_galatians_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book49_ephesians_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book50_philippians_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book51_colossians_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book52_1thessalonians_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book53_2thessalonians_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book54_1timothy_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book55_2timothy_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book56_tito_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book57_philemon_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book58_hebrews_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book59_tiago_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book60_1peter_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book61_2peter_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book62_1john_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book63_2john_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book64_3john_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book65_judas_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_books_game_data/mock_book66_apocalypse_game_data.dart';
+
+import 'package:quiz_biblico_5/data/mock_levels_game_data/mock_level_difficult_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_levels_game_data/mock_level_medium_game_data.dart';
+import 'package:quiz_biblico_5/data/mock_levels_game_data/mock_level_easy_game_data.dart';
+
+import 'package:quiz_biblico_5/data/mock_random_game_data/mock_random_game_data.dart';
+
+import 'package:quiz_biblico_5/models/game_model.dart';
+
+GameModel mockGameData = GameModel(
+  nameBook: NameBookMock().nameBook,
+  easy: EasyGameMock().easy,
+  medium: MediumGameMock().medium,
+  difficult: DifficultGameMock().difficult,
+  random: RandomGameMock().random,
+  genesis: GenesisGameMock().genesis,
+  exodus: ExodusGameMock().exodus,
+  leviticus: LeviticusGameMock().leviticus,
+  numbers: NumbersGameMock().numbers,
+  deuteronomy: DeuteronomyGameMock().deuteronomy,
+  josue: JosueGameMock().josue,
+  judges: JudgesGameMock().judges,
+  ruth: RuthGameMock().ruth,
+  samuel1: Samuel1GameMock().samuel1,
+  samuel2: Samuel2GameMock().samuel2,
+  kings1: Kings1GameMock().kings1,
+  kings2: Kings2GameMock().kings2,
+  chronicles1: Chronicles1GameMock().chronicles1,
+  chronicles2: Chronicles2GameMock().chronicles2,
+  ezra: EzraGameMock().ezra,
+  nehemiah: NehemiahGameMock().nehemiah,
+  ester: EsterGameMock().ester,
+  job: JobGameMock().job,
+  psalms: PsalmsGameMock().psalms,
+  proverbs: ProverbsGameMock().proverbs,
+  ecclesiastes: EcclesiastesGameMock().ecclesiastes,
+  songs: SongsGameMock().songs,
+  isaiah: IsaiahGameMock().isaiah,
+  jeremiah: JeremiahGameMock().jeremiah,
+  lamentations: LamentationsGameMock().lamentations,
+  ezequiel: EzequielGameMock().ezequiel,
+  daniel: DanielGameMock().daniel,
+  hosea: HoseaGameMock().hosea,
+  joel: JoelGameMock().joel,
+  amos: AmosGameMock().amos,
+  obadiah: ObadiahGameMock().obadiah,
+  jonah: JonahGameMock().jonah,
+  micah: MicahGameMock().micah,
+  no: NoGameMock().no,
+  habakkuk: HabakkukGameMock().habakkuk,
+  zephanies: ZephaniesGameMock().zephanies,
+  haggai: HaggaiGameMock().haggai,
+  zechariah: ZechariahGameMock().zechariah,
+  malachi: MalachiGameMock().malachi,
+  mateus: MateusGameMock().mateus,
+  frames: FramesGameMock().frames,
+  lucas: LucasGameMock().lucas,
+  john: JohnGameMock().john,
+  acts: ActsGameMock().acts,
+  romans: RomansGameMock().romans,
+  corinthians1: Corinthians1GameMock().corinthians1,
+  corinthians2: Corinthians2GameMock().corinthians2,
+  galatians: GalatiansGameMock().galatians,
+  ephesians: EphesiansGameMock().ephesians,
+  philippians: PhilippiansGameMock().philippians,
+  colossians: ColossiansGameMock().colossians,
+  thessalonians1: Thessalonians1GameMock().thessalonians1,
+  thessalonians2: Thessalonians2GameMock().thessalonians2,
+  timothy1: Timothy1GameMock().timothy1,
+  timothy2: Timothy2GameMock().timothy2,
+  tito: TitoGameMock().tito,
+  philemon: PhilemonGameMock().philemon,
+  hebrews: HebrewsGameMock().hebrews,
+  tiago: TiagoGameMock().tiago,
+  peter1: Peter1GameMock().peter1,
+  peter2: Peter2GameMock().peter2,
+  john1: John1GameMock().john1,
+  john2: John2GameMock().john2,
+  john3: John3GameMock().john3,
+  judas: JudasGameMock().judas,
+  apocalypse: ApocalypseGameMock().apocalypse,
+);
