@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:910023683947:android:e3bd41c075b0500d82e62e",
         "android_client_info": {
-          "package_name": "br.com.lila.quiz_biblico"
+          "package_name": "br.com.dev.quizbiblico"
         }
       },
       "oauth_client": [
@@ -38,7 +38,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:910023683947:android:10b549080013d02782e62e",
         "android_client_info": {
-          "package_name": "br.com.lila.quiz_biblico"
+          "package_name": "br.com.dev.quizbiblico"
         }
       },
       "oauth_client": [
