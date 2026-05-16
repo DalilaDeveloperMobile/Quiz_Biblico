@@ -34,7 +34,7 @@
 </td>
 
 <td align="center" width="180">
-<img src="https://raw.githubusercontent.com/rrousselGit/provider/master/resources/translations/logo.svg" width="60"/>
+<img src="https://raw.githubusercontent.com/rousselGit/provider/master/resources/translations/logo.svg" width="60"/>
 <br><br>
 <b>Provider</b>
 </td>
