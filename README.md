@@ -34,12 +34,6 @@
 </td>
 
 <td align="center" width="180">
-<img src="https://raw.githubusercontent.com/rousselGit/provider/master/resources/translations/logo.svg" width="60"/>
-<br><br>
-<b>Provider</b>
-</td>
-
-<td align="center" width="180">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" width="60"/>
 <br><br>
 <b>Android</b>
