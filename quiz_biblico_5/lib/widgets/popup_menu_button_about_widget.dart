@@ -164,7 +164,7 @@ class _PopupMenuButtonAboutWidgetState
                             ),
                             onPressed:
                                 () => shareQB(
-                                  'https://play.google.com/store/apps/details?id=br.com.dev.quizbiblico',
+                                  'https://play.google.com/store/apps/details?id=br.com.developer.quizbiblico',
                                 ),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -201,7 +201,7 @@ class _PopupMenuButtonAboutWidgetState
                             ),
                             onPressed:
                                 () => _launcherLink(
-                                  'https://play.google.com/store/apps/details?id=br.com.dev.quizbiblico',
+                                  'https://play.google.com/store/apps/details?id=br.com.developer.quizbiblico',
                                 ),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),

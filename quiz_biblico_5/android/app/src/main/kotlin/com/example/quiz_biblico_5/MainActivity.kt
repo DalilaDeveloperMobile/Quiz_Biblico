@@ -1,4 +1,4 @@
-package br.com.dev.quizbiblico
+package br.com.developer.quizbiblico
 
 import io.flutter.embedding.android.FlutterActivity
 
