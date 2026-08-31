@@ -2,10 +2,8 @@
 import 'package:flutter/material.dart';
 // import 'package:gdpr_dialog/gdpr_dialog.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:quiz_biblico_5/screens/book_game/book_game.dart';
 import 'package:quiz_biblico_5/screens/chat/chat_page.dart';
-import 'package:quiz_biblico_5/screens/level_game/level_game.dart';
-import 'package:quiz_biblico_5/screens/random_game/random_game.dart';
+import 'package:quiz_biblico_5/screens/questions_page.dart';
 import 'package:quiz_biblico_5/screens/start/start_about.dart';
 import 'package:quiz_biblico_5/screens/ranking_page.dart';
 
@@ -44,9 +42,7 @@ class _NavigationBarDefaultState extends State<NavigationBarDefault> {
 
   List<Widget> screens = [
     const StartAbout(),
-    const RandomGame(),
-    const LevelGame(),
-    const BookGame(),
+    const Questions(),
     const RankingPage(),
     const ChatPage(),
   ];
@@ -80,30 +76,35 @@ class _NavigationBarDefaultState extends State<NavigationBarDefault> {
                   onTap: () => setState(() => selectedTabIndex = 0),
                   isDifferentTabIndex: selectedTabIndex != 0,
                 ),
+                // TabButtonWidget(
+                //   text: 'Random',
+                //   onTap: () => setState(() => selectedTabIndex = 1),
+                //   isDifferentTabIndex: selectedTabIndex != 1,
+                // ),
+                // TabButtonWidget(
+                //   text: 'Level',
+                //   onTap: () => setState(() => selectedTabIndex = 2),
+                //   isDifferentTabIndex: selectedTabIndex != 2,
+                // ),
+                // TabButtonWidget(
+                //   text: 'Books',
+                //   onTap: () => setState(() => selectedTabIndex = 3),
+                //   isDifferentTabIndex: selectedTabIndex != 3,
+                // ),
                 TabButtonWidget(
-                  text: 'Random',
+                  text: 'Questions',
                   onTap: () => setState(() => selectedTabIndex = 1),
                   isDifferentTabIndex: selectedTabIndex != 1,
                 ),
                 TabButtonWidget(
-                  text: 'Level',
+                  text: 'Ranking',
                   onTap: () => setState(() => selectedTabIndex = 2),
                   isDifferentTabIndex: selectedTabIndex != 2,
                 ),
                 TabButtonWidget(
-                  text: 'Books',
+                  text: 'Chat',
                   onTap: () => setState(() => selectedTabIndex = 3),
                   isDifferentTabIndex: selectedTabIndex != 3,
-                ),
-                TabButtonWidget(
-                  text: 'Ranking',
-                  onTap: () => setState(() => selectedTabIndex = 4),
-                  isDifferentTabIndex: selectedTabIndex != 4,
-                ),
-                 TabButtonWidget(
-                  text: 'Chat',
-                  onTap: () => setState(() => selectedTabIndex = 5),
-                  isDifferentTabIndex: selectedTabIndex != 5,
                 ),
               ],
             ),
