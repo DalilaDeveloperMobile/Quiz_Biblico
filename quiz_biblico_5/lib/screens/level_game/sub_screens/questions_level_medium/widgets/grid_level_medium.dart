@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_biblico_5/data/mock_game_data.dart';
+import 'package:quiz_biblico_5/models/variables_game_model.dart';
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_medium/widgets/items_number_level_medium.dart';
 import 'package:quiz_biblico_5/widgets/admob_ads_widget.dart';
 
 class GridLevelMedium extends StatelessWidget {
-  const GridLevelMedium({super.key});
+  final List<VariablesGameModel>? medium;
+  final String numbersMedium;
+
+  const GridLevelMedium({
+    super.key,
+    required this.medium,
+    required this.numbersMedium,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +39,11 @@ class GridLevelMedium extends StatelessWidget {
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
               ),
-              children: mockGameData.medium.map((medium) {
-                return ItemsNumberLevelMedium(medium: medium);
+              children: medium!.map((medium) {
+                return ItemsNumberLevelMedium(
+                  medium: medium,
+                  numbersMedium: numbersMedium,
+                );
               }).toList(),
             ),
           ),

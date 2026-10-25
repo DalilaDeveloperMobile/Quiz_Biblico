@@ -3,8 +3,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-// import 'package:lottie/lottie.dart';
-import 'package:quiz_biblico_5/data/mock_levels_game_data/mock_level_difficult_game_data.dart';
 import 'package:quiz_biblico_5/models/variables_game_model.dart';
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_difficult/widgets/grid_level_difficult.dart';
 import 'package:quiz_biblico_5/shared/app_bar_default/app_bar_default.dart';
@@ -18,7 +16,14 @@ import '../widgets/options_level_difficult/option_b_level_difficult.dart';
 import '../widgets/options_level_difficult/option_c_level_difficult.dart';
 
 class ChooseNumberLevelDifficult extends StatefulWidget {
-  const ChooseNumberLevelDifficult({super.key});
+  final List<VariablesGameModel> difficult;
+  final String numbersDifficult;
+
+  const ChooseNumberLevelDifficult({
+    super.key,
+    required this.difficult,
+    required this.numbersDifficult,
+  });
 
   @override
   State<ChooseNumberLevelDifficult> createState() =>
@@ -48,7 +53,7 @@ class _ChooseNumberLevelDifficultState
   void nextQuestion() {
     setState(() {
       if (currentQuestionIndexDifficult <
-          DifficultGameMock().difficult.length - 1) {
+          widget.difficult.length - 1) {
         currentQuestionIndexDifficult++;
         PreferencesManager.instance.currentQuestionIndexDifficult =
             currentQuestionIndexDifficult; // Salvar o índice
@@ -72,77 +77,57 @@ class _ChooseNumberLevelDifficultState
   Widget build(BuildContext context) {
     return PreferencesManager.instance.isDirectQuestionMode
         ? SafeArea(
-          child: Scaffold(
-            appBar: PreferredSize(
-              preferredSize: Size.fromHeight(55.0),
-              child: AppBarDefault(text: 'pickAnumber'.tr()),
+            child: Scaffold(
+              appBar: PreferredSize(
+                preferredSize: Size.fromHeight(55.0),
+                child: AppBarDefault(text: 'pickAnumber'.tr()),
+              ),
+              body: GridLevelDifficult(
+                difficult: widget.difficult,
+                numbersDifficult: widget.numbersDifficult,
+              ),
             ),
-            body: GridLevelDifficult(),
-          ),
-        )
+          )
         : isFinishedDifficult
         ? SafeArea(
-          child: Scaffold(
-            body: LayoutBuilder(
-              builder: (ctx, constraints) {
-                return Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        Theme.of(context).secondaryHeaderColor,
-                        Theme.of(context).primaryColor,
-                        Theme.of(context).secondaryHeaderColor,
-                      ],
+            child: Scaffold(
+              body: LayoutBuilder(
+                builder: (ctx, constraints) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                        colors: [
+                          Theme.of(context).secondaryHeaderColor,
+                          Theme.of(context).primaryColor,
+                          Theme.of(context).secondaryHeaderColor,
+                        ],
+                      ),
                     ),
-                  ),
-                  child: Center(
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        // Lottie.asset(
-                        //   'assets/congrats_animation.json', // Adicione uma animação JSON
-                        //   width: 700,
-                        //   height: 700,
-                        //   fit: BoxFit.contain,
-                        // ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              margin: const EdgeInsets.all(8.0),
-                              padding: const EdgeInsets.all(8.0),
-                              decoration: BoxDecoration(
-                                color: Colors.brown.withValues(alpha: 0.5),
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                              child: Text(
-                                'congratulationsHard'.tr(),
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'FredokaOne',
-                                  fontSize: 25, //constraints!.maxHeight * 0.06,
-                                  shadows: [
-                                    Shadow(
-                                      blurRadius: 7.0,
-                                      color: Colors.black,
-                                      offset: Offset(1.0, 1.0),
-                                    ),
-                                  ],
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                            ListTile(
-                              title: Container(
+                    child: Center(
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          // Lottie.asset(
+                          //   'assets/congrats_animation.json', // Adicione uma animação JSON
+                          //   width: 700,
+                          //   height: 700,
+                          //   fit: BoxFit.contain,
+                          // ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.all(8.0),
                                 decoration: BoxDecoration(
-                                  color: Colors.red.withValues(alpha: 0.5),
+                                  color: Colors.brown.withValues(alpha: 0.5),
                                   borderRadius: BorderRadius.circular(15.0),
                                 ),
                                 child: Text(
-                                  'resetIssues'.tr(),
+                                  'congratulationsHard'.tr(),
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontFamily: 'FredokaOne',
@@ -159,25 +144,49 @@ class _ChooseNumberLevelDifficultState
                                   textAlign: TextAlign.center,
                                 ),
                               ),
-                              onTap: () async {
-                                await resetProgressDifficult();
-                              },
-                            ),
-                          ],
-                        ),
-                      ],
+                              ListTile(
+                                title: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.red.withValues(alpha: 0.5),
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Text(
+                                    'resetIssues'.tr(),
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'FredokaOne',
+                                      fontSize:
+                                          25, //constraints!.maxHeight * 0.06,
+                                      shadows: [
+                                        Shadow(
+                                          blurRadius: 7.0,
+                                          color: Colors.black,
+                                          offset: Offset(1.0, 1.0),
+                                        ),
+                                      ],
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                onTap: () async {
+                                  await resetProgressDifficult();
+                                },
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
-          ),
-        )
+          )
         : DifficultQuestions(
-          nextQuestion: nextQuestion,
-          difficultQuestionsModel:
-              DifficultGameMock().difficult[currentQuestionIndexDifficult],
-        );
+            nextQuestion: nextQuestion,
+            difficultQuestionsModel:
+                widget.difficult[currentQuestionIndexDifficult],
+          );
   }
 }
 
@@ -252,14 +261,13 @@ class _DifficultQuestionsState extends State<DifficultQuestions>
                 },
               ),
               IconButton(
-                onPressed:
-                    () async => await _speak(
-                      "${widget.difficultQuestionsModel?.question!.substring(3)}."
-                      "${'alternativeA'.tr()} ${widget.difficultQuestionsModel?.alternatives1!.substring(2)}."
-                      "${'alternativeB'.tr()} ${widget.difficultQuestionsModel?.alternatives2!.substring(2)}."
-                      "${'alternativeC'.tr()} ${widget.difficultQuestionsModel?.alternatives3!.substring(2)}.",
-                      context,
-                    ),
+                onPressed: () async => await _speak(
+                  "${widget.difficultQuestionsModel?.question!.substring(3)}."
+                  "${'alternativeA'.tr()} ${widget.difficultQuestionsModel?.alternatives1!.substring(2)}."
+                  "${'alternativeB'.tr()} ${widget.difficultQuestionsModel?.alternatives2!.substring(2)}."
+                  "${'alternativeC'.tr()} ${widget.difficultQuestionsModel?.alternatives3!.substring(2)}.",
+                  context,
+                ),
                 icon: const Icon(Icons.volume_up),
               ),
               IconButton(
@@ -287,118 +295,127 @@ class _DifficultQuestionsState extends State<DifficultQuestions>
                 child: DefaultTextStyle(
                   style: Theme.of(context).textTheme.bodyMedium!,
                   child: LayoutBuilder(
-                    builder: (
-                      BuildContext context,
-                      BoxConstraints viewportConstraints,
-                    ) {
-                      return SingleChildScrollView(
-                        child: ConstrainedBox(
-                          constraints: BoxConstraints(
-                            minHeight: viewportConstraints.maxHeight,
-                          ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              _isTimerVisible
-                                  ? InkWell(
-                                    onTap: () {
-                                      setState(() {
-                                        _isTimerVisible = !_isTimerVisible;
-                                      });
-                                    },
-                                    child: CustomTimer(
-                                      controller: _controller,
-                                      builder: (state, remaining) {
-                                        return Container(
-                                          padding: const EdgeInsets.only(
-                                            bottom: 2.0,
-                                          ),
-                                          alignment: Alignment.center,
-                                          width: double.infinity,
-                                          height: 30,
-                                          color: Colors.red.shade300,
-                                          child: Text(
-                                            "${remaining.hours}:${remaining.minutes}:${remaining.seconds}.${remaining.milliseconds}",
-                                            style: Theme.of(context)
-                                                .appBarTheme
-                                                .titleTextStyle
-                                                ?.copyWith(
-                                                  fontSize: 20,
-                                                  fontFamily: 'Quicksand',
-                                                  fontWeight: FontWeight.w600,
+                    builder:
+                        (
+                          BuildContext context,
+                          BoxConstraints viewportConstraints,
+                        ) {
+                          return SingleChildScrollView(
+                            child: ConstrainedBox(
+                              constraints: BoxConstraints(
+                                minHeight: viewportConstraints.maxHeight,
+                              ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  _isTimerVisible
+                                      ? InkWell(
+                                          onTap: () {
+                                            setState(() {
+                                              _isTimerVisible =
+                                                  !_isTimerVisible;
+                                            });
+                                          },
+                                          child: CustomTimer(
+                                            controller: _controller,
+                                            builder: (state, remaining) {
+                                              return Container(
+                                                padding: const EdgeInsets.only(
+                                                  bottom: 2.0,
                                                 ),
+                                                alignment: Alignment.center,
+                                                width: double.infinity,
+                                                height: 30,
+                                                color: Colors.red.shade300,
+                                                child: Text(
+                                                  "${remaining.hours}:${remaining.minutes}:${remaining.seconds}.${remaining.milliseconds}",
+                                                  style: Theme.of(context)
+                                                      .appBarTheme
+                                                      .titleTextStyle
+                                                      ?.copyWith(
+                                                        fontSize: 20,
+                                                        fontFamily: 'Quicksand',
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                ),
+                                              );
+                                            },
                                           ),
-                                        );
-                                      },
-                                    ),
-                                  )
-                                  : InkWell(
-                                    onTap: () {
-                                      setState(() {
-                                        _isTimerVisible = !_isTimerVisible;
-                                        _controller.reset();
-                                      });
-                                    },
-                                    child: Container(
-                                      padding: const EdgeInsets.only(
-                                        bottom: 2.0,
-                                      ),
-                                      alignment: Alignment.center,
-                                      width: double.infinity,
-                                      height: 30,
-                                      color: Colors.red.shade300,
-                                      child: Text(
-                                        'stopwatch25Seconds'.tr(),
-                                        style: Theme.of(context)
-                                            .appBarTheme
-                                            .titleTextStyle
-                                            ?.copyWith(fontSize: 20),
-                                      ),
-                                    ),
+                                        )
+                                      : InkWell(
+                                          onTap: () {
+                                            setState(() {
+                                              _isTimerVisible =
+                                                  !_isTimerVisible;
+                                              _controller.reset();
+                                            });
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.only(
+                                              bottom: 2.0,
+                                            ),
+                                            alignment: Alignment.center,
+                                            width: double.infinity,
+                                            height: 30,
+                                            color: Colors.red.shade300,
+                                            child: Text(
+                                              'stopwatch25Seconds'.tr(),
+                                              style: Theme.of(context)
+                                                  .appBarTheme
+                                                  .titleTextStyle
+                                                  ?.copyWith(fontSize: 20),
+                                            ),
+                                          ),
+                                        ),
+                                  TextQuestion(
+                                    textQuestion: widget
+                                        .difficultQuestionsModel!
+                                        .question!,
                                   ),
-                              TextQuestion(
-                                textQuestion:
-                                    widget.difficultQuestionsModel!.question!,
+                                  const SizedBox(height: 5.0),
+                                  OptionALevelDifficult(
+                                    onTap: () {
+                                      Navigator.of(context).pushNamed(
+                                        AppRoutes.alternative1LevelDifficult,
+                                        arguments:
+                                            widget.difficultQuestionsModel!,
+                                      );
+                                    },
+                                    difficult: widget.difficultQuestionsModel!,
+                                  ),
+                                  const SizedBox(height: 5.0),
+                                  OptionBLevelDifficult(
+                                    onTap: () {
+                                      Navigator.of(context).pushNamed(
+                                        AppRoutes.alternative2LevelDifficult,
+                                        arguments:
+                                            widget.difficultQuestionsModel!,
+                                      );
+                                    },
+                                    difficult: widget.difficultQuestionsModel!,
+                                  ),
+                                  const SizedBox(height: 5.0),
+                                  OptionCLevelDifficult(
+                                    onTap: () {
+                                      Navigator.of(context).pushNamed(
+                                        AppRoutes
+                                            .alternative3LevelDifficult, //ALTERNATIVA3,
+                                        arguments:
+                                            widget.difficultQuestionsModel!,
+                                      );
+                                    },
+                                    difficult: widget.difficultQuestionsModel!,
+                                  ),
+                                  const SizedBox(height: 8.0),
+                                  const TextValueScore(),
+                                ],
                               ),
-                              const SizedBox(height: 5.0),
-                              OptionALevelDifficult(
-                                onTap: () {
-                                  Navigator.of(context).pushNamed(
-                                    AppRoutes.alternative1LevelDifficult,
-                                    arguments: widget.difficultQuestionsModel!,
-                                  );
-                                },
-                                difficult: widget.difficultQuestionsModel!,
-                              ),
-                              const SizedBox(height: 5.0),
-                              OptionBLevelDifficult(
-                                onTap: () {
-                                  Navigator.of(context).pushNamed(
-                                    AppRoutes.alternative2LevelDifficult,
-                                    arguments: widget.difficultQuestionsModel!,
-                                  );
-                                },
-                                difficult: widget.difficultQuestionsModel!,
-                              ),
-                              const SizedBox(height: 5.0),
-                              OptionCLevelDifficult(
-                                onTap: () {
-                                  Navigator.of(context).pushNamed(
-                                    AppRoutes
-                                        .alternative3LevelDifficult, //ALTERNATIVA3,
-                                    arguments: widget.difficultQuestionsModel!,
-                                  );
-                                },
-                                difficult: widget.difficultQuestionsModel!,
-                              ),
-                              const SizedBox(height: 8.0),
-                              const TextValueScore(),
-                            ],
-                          ),
-                        ),
-                      );
-                    },
+                            ),
+                          );
+                        },
                   ),
                 ),
               ),
@@ -410,8 +427,9 @@ class _DifficultQuestionsState extends State<DifficultQuestions>
   }
 
   Future<void> _speak(String text, BuildContext context) async {
-    final countryCode =
-        EasyLocalization.of(context)?.currentLocale?.countryCode;
+    final countryCode = EasyLocalization.of(
+      context,
+    )?.currentLocale?.countryCode;
 
     if (kDebugMode) {
       print(countryCode);

@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_biblico_5/data/mock_game_data.dart';
+import 'package:quiz_biblico_5/models/variables_game_model.dart';
 
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_difficult/widgets/items_number_level_difficult.dart';
 import 'package:quiz_biblico_5/widgets/admob_ads_widget.dart';
 
 class GridLevelDifficult extends StatelessWidget {
-  const GridLevelDifficult({super.key});
+  final List<VariablesGameModel> difficult;
+  final String numbersDifficult;
+
+  const GridLevelDifficult({
+    super.key,
+    required this.difficult,
+    required this.numbersDifficult,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +40,11 @@ class GridLevelDifficult extends StatelessWidget {
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
               ),
-              children: mockGameData.difficult.map((difficult) {
-                return ItemsNumberLevelDifficult(difficult: difficult);
+              children: difficult.map((difficult) {
+                return ItemsNumberLevelDifficult(
+                  difficult: difficult,
+                  numbersDifficult: numbersDifficult,
+                );
               }).toList(),
             ),
           ),

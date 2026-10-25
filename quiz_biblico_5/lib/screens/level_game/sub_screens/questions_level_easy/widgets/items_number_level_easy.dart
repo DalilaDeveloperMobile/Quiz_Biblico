@@ -5,9 +5,10 @@ import 'package:quiz_biblico_5/utils/app_routes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ItemsNumberLevelEasy extends StatefulWidget {
-  const ItemsNumberLevelEasy({super.key, this.easy});
+  const ItemsNumberLevelEasy({super.key, this.easy, required this.numbers});
 
   final VariablesGameModel? easy;
+  final String numbers;
 
   @override
   State<ItemsNumberLevelEasy> createState() => _ItemsNumberLevelEasyState();
@@ -19,7 +20,7 @@ class _ItemsNumberLevelEasyState extends State<ItemsNumberLevelEasy> {
   Future<void> _initIsSelectIcon() async {
     final SharedPreferences prefs = await _prefs;
     bool? isSelectNamber = prefs.getBool(
-      'isSelectNamberLevelEasy${widget.easy!.id}',
+      '${widget.numbers}${widget.easy!.id}',
     );
     if (isSelectNamber != null) {
       setState(() {
@@ -31,7 +32,7 @@ class _ItemsNumberLevelEasyState extends State<ItemsNumberLevelEasy> {
   Future<void> _toggleIsSelectIcon() async {
     final SharedPreferences prefs = await _prefs;
     bool success = await prefs.setBool(
-      'isSelectNamberLevelEasy${widget.easy!.id}',
+      '${widget.numbers}${widget.easy!.id}',
       !widget.easy!.isSelectNamber,
     );
     if (success) {

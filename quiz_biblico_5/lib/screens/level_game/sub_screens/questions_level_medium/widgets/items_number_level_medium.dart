@@ -7,10 +7,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 class ItemsNumberLevelMedium extends StatefulWidget {
   const ItemsNumberLevelMedium({
     super.key,
-    required this.medium,
+    required this.medium, required this.numbersMedium,
   });
 
   final VariablesGameModel medium;
+  final String numbersMedium;
 
   @override
   State<ItemsNumberLevelMedium> createState() => _ItemsNumberLevelMediumState();
@@ -22,7 +23,7 @@ class _ItemsNumberLevelMediumState extends State<ItemsNumberLevelMedium> {
   Future<void> _initIsSelectIcon() async {
     final SharedPreferences prefs = await _prefs;
     bool? isSelectNamber = prefs.getBool(
-      'isSelectNamberLevelMedium${widget.medium.id}',
+      '${widget.numbersMedium}${widget.medium.id}',
     );
     if (isSelectNamber != null) {
       setState(() {
@@ -34,7 +35,7 @@ class _ItemsNumberLevelMediumState extends State<ItemsNumberLevelMedium> {
   Future<void> _toggleIsSelectIcon() async {
     final SharedPreferences prefs = await _prefs;
     bool success = await prefs.setBool(
-      'isSelectNamberLevelMedium${widget.medium.id}',
+      '${widget.numbersMedium}${widget.medium.id}',
       !widget.medium.isSelectNamber,
     );
     if (success) {

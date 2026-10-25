@@ -173,7 +173,7 @@ class _RankingPageState extends State<RankingPage> {
                   borderRadius: BorderRadius.circular(15)),
               child: ListTile(
                 leading: SizedBox(
-                  width: 70,
+                  width: 75,
                   child: Row(
                     children: [
                       _buildRankIndex(index),

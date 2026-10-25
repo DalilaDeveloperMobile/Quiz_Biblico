@@ -8,12 +8,15 @@ class ItemsNumberLevelDifficult extends StatefulWidget {
   const ItemsNumberLevelDifficult({
     super.key,
     this.difficult,
+    required this.numbersDifficult,
   });
 
   final VariablesGameModel? difficult;
+  final String numbersDifficult;
 
   @override
-  State<ItemsNumberLevelDifficult> createState() => _ItemsNumberLevelDifficultState();
+  State<ItemsNumberLevelDifficult> createState() =>
+      _ItemsNumberLevelDifficultState();
 }
 
 class _ItemsNumberLevelDifficultState extends State<ItemsNumberLevelDifficult> {
@@ -22,7 +25,7 @@ class _ItemsNumberLevelDifficultState extends State<ItemsNumberLevelDifficult> {
   Future<void> _initIsSelectIcon() async {
     final SharedPreferences prefs = await _prefs;
     bool? isSelectNamber = prefs.getBool(
-      'isSelectNamberLevelDifficult${widget.difficult!.id}',
+      '${widget.numbersDifficult}${widget.difficult!.id}',
     );
     if (isSelectNamber != null) {
       setState(() {
@@ -34,7 +37,7 @@ class _ItemsNumberLevelDifficultState extends State<ItemsNumberLevelDifficult> {
   Future<void> _toggleIsSelectIcon() async {
     final SharedPreferences prefs = await _prefs;
     bool success = await prefs.setBool(
-      'isSelectNamberLevelDifficult${widget.difficult!.id}',
+      '${widget.numbersDifficult}${widget.difficult!.id}',
       !widget.difficult!.isSelectNamber,
     );
     if (success) {
@@ -67,10 +70,7 @@ class _ItemsNumberLevelDifficultState extends State<ItemsNumberLevelDifficult> {
             : BoxDecoration(
                 borderRadius: BorderRadius.circular(80),
                 gradient: LinearGradient(
-                  colors: [
-                    Colors.white.withValues(alpha: 0.5),
-                    Colors.white,
-                  ],
+                  colors: [Colors.white.withValues(alpha: 0.5), Colors.white],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
@@ -80,7 +80,9 @@ class _ItemsNumberLevelDifficultState extends State<ItemsNumberLevelDifficult> {
             widget.difficult!.id!,
             style: TextStyle(
               fontSize: 26,
-              color: widget.difficult!.isSelectNamber ? Colors.white : Colors.black,
+              color: widget.difficult!.isSelectNamber
+                  ? Colors.white
+                  : Colors.black,
               fontFamily: 'Shrikhand',
             ),
           ),

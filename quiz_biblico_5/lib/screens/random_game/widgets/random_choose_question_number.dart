@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_biblico_5/data/mock_game_data.dart';
+import 'package:quiz_biblico_5/models/variables_game_model.dart';
 
 import 'package:quiz_biblico_5/screens/random_game/widgets/random_item_number.dart';
 import 'package:quiz_biblico_5/widgets/admob_ads_widget.dart';
 
 class RandomChooseQuestionNumber extends StatefulWidget {
-  const RandomChooseQuestionNumber({super.key});
+  const RandomChooseQuestionNumber({
+    super.key,
+    required this.random,
+    required this.numbersRandom,
+  });
+
+  final List<VariablesGameModel> random;
+  final String numbersRandom;
 
   @override
-  State<RandomChooseQuestionNumber> createState() => _RandomChooseQuestionNumberState();
+  State<RandomChooseQuestionNumber> createState() =>
+      _RandomChooseQuestionNumberState();
 }
 
-class _RandomChooseQuestionNumberState extends State<RandomChooseQuestionNumber> {
+class _RandomChooseQuestionNumberState
+    extends State<RandomChooseQuestionNumber> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -38,8 +47,11 @@ class _RandomChooseQuestionNumberState extends State<RandomChooseQuestionNumber>
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
               ),
-              children: mockGameData.random.map((per) {
-                return RandomItemNumber(randomQuestionsModel: per);
+              children: widget.random.map((per) {
+                return RandomItemNumber(
+                  randomQuestionsModel: per,
+                  numbersRandom: widget.numbersRandom,
+                );
               }).toList(),
             ),
           ),

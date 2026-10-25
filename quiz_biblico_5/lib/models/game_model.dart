@@ -2,83 +2,157 @@ import 'package:quiz_biblico_5/models/variables_game_model.dart';
 
 class GameModel {
   final Map<String, int> nameBook;
+
   final List<VariablesGameModel> random;
+  final List<VariablesGameModel> randomVerses;
   final List<VariablesGameModel> easy;
+  final List<VariablesGameModel> easyVerses;
   final List<VariablesGameModel> medium;
+  final List<VariablesGameModel> mediumVerses;
   final List<VariablesGameModel> difficult;
+  final List<VariablesGameModel> difficultVerses;
   final List<VariablesGameModel> genesis;
+
   final List<VariablesGameModel> exodus;
+
   final List<VariablesGameModel> leviticus;
+
   final List<VariablesGameModel> numbers;
+
   final List<VariablesGameModel> deuteronomy;
+
   final List<VariablesGameModel> josue;
+
   final List<VariablesGameModel> judges;
+
   final List<VariablesGameModel> ruth;
+
   final List<VariablesGameModel> samuel1;
+
   final List<VariablesGameModel> samuel2;
+
   final List<VariablesGameModel> kings1;
+
   final List<VariablesGameModel> kings2;
+
   final List<VariablesGameModel> chronicles1;
+
   final List<VariablesGameModel> chronicles2;
+
   final List<VariablesGameModel> ezra;
+
   final List<VariablesGameModel> nehemiah;
+
   final List<VariablesGameModel> ester;
+
   final List<VariablesGameModel> job;
+
   final List<VariablesGameModel> psalms;
+
   final List<VariablesGameModel> proverbs;
+
   final List<VariablesGameModel> ecclesiastes;
+
   final List<VariablesGameModel> songs;
+
   final List<VariablesGameModel> isaiah;
+
   final List<VariablesGameModel> jeremiah;
+
   final List<VariablesGameModel> lamentations;
+
   final List<VariablesGameModel> ezequiel;
+
   final List<VariablesGameModel> daniel;
+
   final List<VariablesGameModel> hosea;
+
   final List<VariablesGameModel> joel;
+
   final List<VariablesGameModel> amos;
+
   final List<VariablesGameModel> obadiah;
+
   final List<VariablesGameModel> jonah;
+
   final List<VariablesGameModel> micah;
+
   final List<VariablesGameModel> no;
+
   final List<VariablesGameModel> habakkuk;
+
   final List<VariablesGameModel> zephanies;
+
   final List<VariablesGameModel> haggai;
+
   final List<VariablesGameModel> zechariah;
+
   final List<VariablesGameModel> malachi;
+
   final List<VariablesGameModel> mateus;
+
   final List<VariablesGameModel> frames;
+
   final List<VariablesGameModel> lucas;
+
   final List<VariablesGameModel> john;
+
   final List<VariablesGameModel> acts;
+
   final List<VariablesGameModel> romans;
+
   final List<VariablesGameModel> corinthians1;
+
   final List<VariablesGameModel> corinthians2;
+
   final List<VariablesGameModel> galatians;
+
   final List<VariablesGameModel> ephesians;
+
   final List<VariablesGameModel> philippians;
+
   final List<VariablesGameModel> colossians;
+
   final List<VariablesGameModel> thessalonians1;
+
   final List<VariablesGameModel> thessalonians2;
+
   final List<VariablesGameModel> timothy1;
+
   final List<VariablesGameModel> timothy2;
+
   final List<VariablesGameModel> tito;
+
   final List<VariablesGameModel> philemon;
+
   final List<VariablesGameModel> hebrews;
+
   final List<VariablesGameModel> tiago;
+
   final List<VariablesGameModel> peter1;
+
   final List<VariablesGameModel> peter2;
+
   final List<VariablesGameModel> john1;
+
   final List<VariablesGameModel> john2;
+
   final List<VariablesGameModel> john3;
+
   final List<VariablesGameModel> judas;
+
   final List<VariablesGameModel> apocalypse;
 
   GameModel({
     required this.nameBook,
     required this.random,
+    required this.randomVerses,
     required this.easy,
+    required this.easyVerses,
     required this.medium,
+    required this.mediumVerses,
     required this.difficult,
+    required this.difficultVerses,
     required this.genesis,
     required this.exodus,
     required this.leviticus,

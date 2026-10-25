@@ -5,10 +5,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class RandomItemNumber extends StatefulWidget {
   final VariablesGameModel? randomQuestionsModel;
+  final String numbersRandom;
 
   const RandomItemNumber({
     super.key,
     this.randomQuestionsModel,
+    required this.numbersRandom,
   });
 
   @override
@@ -21,7 +23,7 @@ class _RandomItemNumberState extends State<RandomItemNumber> {
   Future<void> _initIsSelectIcon() async {
     final SharedPreferences prefs = await _prefs;
     bool? isSelectNamber = prefs.getBool(
-      'isSelectNamberRandom${widget.randomQuestionsModel!.id}',
+      '${widget.numbersRandom}${widget.randomQuestionsModel!.id}',
     );
     if (isSelectNamber != null) {
       setState(() {
@@ -33,12 +35,13 @@ class _RandomItemNumberState extends State<RandomItemNumber> {
   Future<void> _toggleIsSelectIcon() async {
     final SharedPreferences prefs = await _prefs;
     bool success = await prefs.setBool(
-      'isSelectNamberRandom${widget.randomQuestionsModel!.id}',
+      '${widget.numbersRandom}${widget.randomQuestionsModel!.id}',
       !widget.randomQuestionsModel!.isSelectNamber,
     );
     if (success) {
       setState(() {
-        widget.randomQuestionsModel!.isSelectNamber = !widget.randomQuestionsModel!.isSelectNamber;
+        widget.randomQuestionsModel!.isSelectNamber =
+            !widget.randomQuestionsModel!.isSelectNamber;
       });
     }
   }
@@ -66,10 +69,7 @@ class _RandomItemNumberState extends State<RandomItemNumber> {
             : BoxDecoration(
                 borderRadius: BorderRadius.circular(80),
                 gradient: LinearGradient(
-                  colors: [
-                    Colors.white.withValues(alpha: 0.5),
-                    Colors.white,
-                  ],
+                  colors: [Colors.white.withValues(alpha: 0.5), Colors.white],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
@@ -79,7 +79,9 @@ class _RandomItemNumberState extends State<RandomItemNumber> {
             widget.randomQuestionsModel!.id!,
             style: TextStyle(
               fontSize: 26,
-              color: widget.randomQuestionsModel!.isSelectNamber ? Colors.white : Colors.black,
+              color: widget.randomQuestionsModel!.isSelectNamber
+                  ? Colors.white
+                  : Colors.black,
               fontFamily: 'Shrikhand',
             ),
           ),

@@ -6,6 +6,7 @@ import 'package:quiz_biblico_5/screens/chat/chat_page.dart';
 import 'package:quiz_biblico_5/screens/questions_page.dart';
 import 'package:quiz_biblico_5/screens/start/start_about.dart';
 import 'package:quiz_biblico_5/screens/ranking_page.dart';
+import 'package:quiz_biblico_5/screens/verses_page.dart';
 
 import 'widgets/tab_button_widget.dart';
 
@@ -43,6 +44,7 @@ class _NavigationBarDefaultState extends State<NavigationBarDefault> {
   List<Widget> screens = [
     const StartAbout(),
     const Questions(),
+    const VersesPage(),
     const RankingPage(),
     const ChatPage(),
   ];
@@ -97,14 +99,19 @@ class _NavigationBarDefaultState extends State<NavigationBarDefault> {
                   isDifferentTabIndex: selectedTabIndex != 1,
                 ),
                 TabButtonWidget(
-                  text: 'Ranking',
+                  text: 'Verses',
                   onTap: () => setState(() => selectedTabIndex = 2),
                   isDifferentTabIndex: selectedTabIndex != 2,
                 ),
                 TabButtonWidget(
-                  text: 'Chat',
+                  text: 'Ranking',
                   onTap: () => setState(() => selectedTabIndex = 3),
                   isDifferentTabIndex: selectedTabIndex != 3,
+                ),
+                TabButtonWidget(
+                  text: 'Chat',
+                  onTap: () => setState(() => selectedTabIndex = 4),
+                  isDifferentTabIndex: selectedTabIndex != 4,
                 ),
               ],
             ),

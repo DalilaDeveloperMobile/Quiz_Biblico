@@ -2,8 +2,6 @@ import 'package:custom_timer/custom_timer.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-// import 'package:lottie/lottie.dart';
-import 'package:quiz_biblico_5/data/mock_random_game_data/mock_random_game_data.dart';
 import 'package:quiz_biblico_5/models/variables_game_model.dart';
 import 'package:quiz_biblico_5/screens/random_game/widgets/random_choose_question_number.dart';
 import 'package:quiz_biblico_5/shared/app_bar_default/app_bar_default.dart';
@@ -17,7 +15,18 @@ import 'widgets/random_alternatives/random_alternative_b.dart';
 import 'widgets/random_alternatives/random_alternative_c.dart';
 
 class RandomGame extends StatefulWidget {
-  const RandomGame({super.key});
+  const RandomGame({
+    super.key,
+    required this.appBarText,
+    required this.random,
+    required this.numbersRandom,
+  });
+
+  final String appBarText;
+
+  final List<VariablesGameModel> random;
+
+  final String numbersRandom;
 
   @override
   State<RandomGame> createState() => _RandomGameState();
@@ -44,7 +53,7 @@ class _RandomGameState extends State<RandomGame> {
 
   void nextQuestion() {
     setState(() {
-      if (currentQuestionIndexRandom < RandomGameMock().random.length - 1) {
+      if (currentQuestionIndexRandom < widget.random.length - 1) {
         currentQuestionIndexRandom++;
         PreferencesManager.instance.currentQuestionIndexRandom =
             currentQuestionIndexRandom; // Salvar o índice
@@ -71,9 +80,12 @@ class _RandomGameState extends State<RandomGame> {
             child: Scaffold(
               appBar: PreferredSize(
                 preferredSize: Size.fromHeight(55.0),
-                child: AppBarDefault(text: 'pickAnumber'.tr()),
+                child: AppBarDefault(text: widget.appBarText),
               ),
-              body: RandomChooseQuestionNumber(),
+              body: RandomChooseQuestionNumber(
+                random: widget.random,
+                numbersRandom: widget.numbersRandom,
+              ),
             ),
           )
         : isFinishedRandom
@@ -173,7 +185,7 @@ class _RandomGameState extends State<RandomGame> {
         : RandomQuestions(
             nextQuestion: nextQuestion,
             randomQuestionsModel:
-                RandomGameMock().random[currentQuestionIndexRandom],
+                widget.random[currentQuestionIndexRandom],
           );
   }
 }
@@ -389,7 +401,6 @@ class _RandomQuestionsState extends State<RandomQuestions>
                                   const SizedBox(height: 5.0),
                                   RandomAlternativeC(
                                     onTap: () async {
-                                     
                                       Navigator.of(context).pushNamed(
                                         AppRoutes
                                             .alternative3Random, //ALTERNATIVA3,

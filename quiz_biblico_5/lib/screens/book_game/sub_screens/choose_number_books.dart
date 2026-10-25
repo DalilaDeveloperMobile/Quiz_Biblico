@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 // import 'package:lottie/lottie.dart';
-import 'package:quiz_biblico_5/data/mock_game_data.dart';
+import 'package:quiz_biblico_5/data/verses/mock_game_data.dart';
 import 'package:quiz_biblico_5/models/variables_game_model.dart';
 import 'package:quiz_biblico_5/screens/book_game/widgets/grid_books.dart';
 import 'package:quiz_biblico_5/shared/app_bar_default/app_bar_default.dart';
@@ -2421,166 +2421,415 @@ class _ChooseNumberBooksState extends State<ChooseNumberBooks> {
 
   @override
   Widget build(BuildContext context) {
-    final nameBook =
-        ModalRoute.of(context)!.settings.arguments as MapEntry<String, int>;
+    final args =
+        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+
+    final String nameBook = args['nameBook'];
+    //final int number = args['number'];
+
+    final List<VariablesGameModel> genesis =
+        args['genesis'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> exodus =
+        args['exodus'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> leviticus =
+        args['leviticus'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> numbers =
+        args['numbers'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> deuteronomy =
+        args['deuteronomy'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> josue =
+        args['josue'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> judges =
+        args['judges'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> ruth =
+        args['ruth'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> samuel1 =
+        args['samuel1'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> samuel2 =
+        args['samuel2'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> kings1 =
+        args['kings1'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> kings2 =
+        args['kings2'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> chronicles1 =
+        args['chronicles1'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> chronicles2 =
+        args['chronicles2'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> ezra =
+        args['ezra'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> nehemiah =
+        args['nehemiah'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> ester =
+        args['ester'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> job =
+        args['job'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> psalms =
+        args['psalms'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> proverbs =
+        args['proverbs'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> ecclesiastes =
+        args['ecclesiastes'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> songs =
+        args['songs'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> isaiah =
+        args['isaiah'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> jeremiah =
+        args['jeremiah'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> lamentations =
+        args['lamentations'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> ezequiel =
+        args['ezequiel'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> daniel =
+        args['daniel'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> hosea =
+        args['hosea'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> joel =
+        args['joel'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> amos =
+        args['amos'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> obadiah =
+        args['obadiah'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> jonah =
+        args['jonah'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> micah =
+        args['micah'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> no = args['no'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> habakkuk =
+        args['habakkuk'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> zephanies =
+        args['zephanies'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> haggai =
+        args['haggai'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> zechariah =
+        args['zechariah'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> malachi =
+        args['malachi'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> mateus =
+        args['mateus'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> frames =
+        args['frames'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> lucas =
+        args['lucas'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> john =
+        args['john'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> acts =
+        args['acts'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> romans =
+        args['romans'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> corinthians1 =
+        args['corinthians1'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> corinthians2 =
+        args['corinthians2'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> galatians =
+        args['galatians'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> ephesians =
+        args['ephesians'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> philippians =
+        args['philippians'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> colossians =
+        args['colossians'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> thessalonians1 =
+        args['thessalonians1'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> thessalonians2 =
+        args['thessalonians2'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> timothy1 =
+        args['timothy1'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> timothy2 =
+        args['timothy2'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> tito =
+        args['tito'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> philemon =
+        args['philemon'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> hebrews =
+        args['hebrews'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> tiago =
+        args['tiago'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> peter1 =
+        args['peter1'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> peter2 =
+        args['peter2'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> john1 =
+        args['john1'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> john2 =
+        args['john2'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> john3 =
+        args['john3'] as List<VariablesGameModel>;
+
+    final List<VariablesGameModel> judas =
+        args['judas'] as List<VariablesGameModel>;
+
+            final List<VariablesGameModel> apocalypse =
+        args['apocalypse'] as List<VariablesGameModel>;
+
+        final String nameBank =
+        args['nameBank'] as String;
+
+    final Map<String, dynamic> nameBooks =
+        args['nameBooks'] as Map<String, dynamic>;
 
     return PreferencesManager.instance.isDirectQuestionMode
         ? SafeArea(
-          child: Scaffold(
-            appBar: PreferredSize(
-              preferredSize: const Size.fromHeight(55.0),
-              child: AppBarDefault(
-                text:
-                    nameBook.key.toString() == 'Gênesis'
-                        ? 'Genesis'.tr()
-                        : nameBook.key.toString() == 'Êxodo'
-                        ? 'Exodus'.tr()
-                        : nameBook.key.toString() == 'Levítico'
-                        ? 'Leviticus'.tr()
-                        : nameBook.key,
+            child: Scaffold(
+              appBar: PreferredSize(
+                preferredSize: const Size.fromHeight(55.0),
+                child: AppBarDefault(
+                  text: nameBook == 'Gênesis'
+                      ? 'Genesis'.tr()
+                      : nameBook == 'Êxodo'
+                      ? 'Exodus'.tr()
+                      : nameBook == 'Levítico'
+                      ? 'Leviticus'.tr()
+                      : nameBook,
+                ),
+              ),
+              body: GridBooks(
+                nameBook: nameBook,
+                nameBank: nameBank,
+                apocalypse: apocalypse,
+                judas: judas,
+                john3: john3,
+                john2: john2,
+                john1: john1,
+                peter2: peter2,
+                peter1: peter1,
+                tiago: tiago,
+                hebrews: hebrews,
+                philemon: philemon,
+                tito: tito,
+                timothy1: timothy1,
+                timothy2: timothy2,
+                thessalonians2: thessalonians2,
+                thessalonians1: thessalonians1,
+                colossians: colossians,
+                philippians: philippians,
+                ephesians: ephesians,
+                galatians: galatians,
+                corinthians2: corinthians2,
+                corinthians1: corinthians1,
+                romans: romans,
+                acts: acts,
+                john: john,
+                lucas: lucas,
+                frames: frames,
+                mateus: mateus,
+                malachi: malachi,
+                zechariah: zechariah,
+                haggai: haggai,
+                zephanies: zephanies,
+                habakkuk: habakkuk,
+                no: no,
+                micah: micah,
+                jonah: jonah,
+                obadiah: obadiah,
+                amos: amos,
+                joel: joel,
+                hosea: hosea,
+                daniel: daniel,
+                ezequiel: ezequiel,
+                lamentations: lamentations,
+                jeremiah: jeremiah,
+                isaiah: isaiah,
+                songs: songs,
+                ecclesiastes: ecclesiastes,
+                proverbs: proverbs,
+                psalms: psalms,
+                job: job,
+                ester: ester,
+                nehemiah: nehemiah,
+                ezra: ezra,
+                chronicles2: chronicles2,
+                chronicles1: chronicles1,
+                kings2: kings2,
+                kings1: kings1,
+                samuel2: samuel2,
+                samuel1: samuel1,
+                ruth: ruth,
+                judges: judges,
+                josue: josue,
+                deuteronomy: deuteronomy,
+                numbers: numbers,
+                leviticus: leviticus,
+                exodus: exodus,
+                genesis: genesis,
+                nameBooks: nameBooks,
               ),
             ),
-            body: GridBooks(nameBook: nameBook.key),
-          ),
-        )
-        : nameBook.key.toString() == 'Gênesis' && isFinishedGenesis ||
-            nameBook.key.toString() == 'Êxodo' && isFinishedExodus ||
-            nameBook.key.toString() == 'Levítico' && isFinishedLeviticus ||
-            nameBook.key.toString() == 'Números' && isFinishedNumbers ||
-            nameBook.key.toString() == 'Deuteronômio' &&
-                isFinishedDeuteronomy ||
-            nameBook.key.toString() == 'Josué' && isFinishedJosue ||
-            nameBook.key.toString() == 'Juízes' && isFinishedJudges ||
-            nameBook.key.toString() == 'Rute' && isFinishedRuth ||
-            nameBook.key.toString() == '1Samuel' && isFinished1Samuel ||
-            nameBook.key.toString() == '2Samuel' && isFinished2Samuel ||
-            nameBook.key.toString() == '1Reis' && isFinished1Reis ||
-            nameBook.key.toString() == '2Reis' && isFinished2Reis ||
-            nameBook.key.toString() == '1Crônicas' && isFinished1Cronicas ||
-            nameBook.key.toString() == '2Crônicas' && isFinished2Cronicas ||
-            nameBook.key.toString() == 'Esdras' && isFinishedEsdras ||
-            nameBook.key.toString() == 'Neemias' && isFinishedNeemias ||
-            nameBook.key.toString() == 'Ester' && isFinishedEster ||
-            nameBook.key.toString() == 'Jó' && isFinishedJo ||
-            nameBook.key.toString() == 'Salmos' && isFinishedSalmos ||
-            nameBook.key.toString() == 'Provérbios' && isFinishedProverbios ||
-            nameBook.key.toString() == 'Eclesiastes' && isFinishedEclesiastes ||
-            nameBook.key.toString() == 'Cântares' && isFinishedCantares ||
-            nameBook.key.toString() == 'Isaías' && isFinishedIsaias ||
-            nameBook.key.toString() == 'Jeremias' && isFinishedJeremias ||
-            nameBook.key.toString() == 'Lamentações' && isFinishedLamentacoes ||
-            nameBook.key.toString() == 'Ezequiel' && isFinishedEzequiel ||
-            nameBook.key.toString() == 'Daniel' && isFinishedDaniel ||
-            nameBook.key.toString() == 'Oséias' && isFinishedOseias ||
-            nameBook.key.toString() == 'Joel' && isFinishedJoel ||
-            nameBook.key.toString() == 'Amós' && isFinishedAmos ||
-            nameBook.key.toString() == 'Obadias' && isFinishedObadias ||
-            nameBook.key.toString() == 'Jonas' && isFinishedJonas ||
-            nameBook.key.toString() == 'Miquéias' && isFinishedMiqueias ||
-            nameBook.key.toString() == 'Naum' && isFinishedNaum ||
-            nameBook.key.toString() == 'Habacuque' && isFinishedHabacuque ||
-            nameBook.key.toString() == 'Sofonias' && isFinishedSofonias ||
-            nameBook.key.toString() == 'Ageu' && isFinishedAgeu ||
-            nameBook.key.toString() == 'Zacarias' && isFinishedZacarias ||
-            nameBook.key.toString() == 'Malaquias' && isFinishedMalaquias ||
-            nameBook.key.toString() == 'Mateus' && isFinishedMateus ||
-            nameBook.key.toString() == 'Marcos' && isFinishedMarcos ||
-            nameBook.key.toString() == 'Lucas' && isFinishedLucas ||
-            nameBook.key.toString() == 'João' && isFinishedJoao ||
-            nameBook.key.toString() == 'Atos' && isFinishedAtos ||
-            nameBook.key.toString() == 'Romanos' && isFinishedRomanos ||
-            nameBook.key.toString() == '1Coríntios' && isFinished1Corintios ||
-            nameBook.key.toString() == '2Coríntios' && isFinished2Corintios ||
-            nameBook.key.toString() == 'Gálatas' && isFinishedGalatas ||
-            nameBook.key.toString() == 'Efésios' && isFinishedEfesios ||
-            nameBook.key.toString() == 'Filipenses' && isFinishedFilipenses ||
-            nameBook.key.toString() == 'Colossenses' && isFinishedColossenses ||
-            nameBook.key.toString() == '1Tessalonicenses' &&
-                isFinished1Tessalonenses ||
-            nameBook.key.toString() == '2Tessalonicenses' &&
-                isFinished2Tessalonenses ||
-            nameBook.key.toString() == '1Timóteo' && isFinished1Timoteo ||
-            nameBook.key.toString() == '2Timóteo' && isFinished2Timoteo ||
-            nameBook.key.toString() == 'Tito' && isFinishedTito ||
-            nameBook.key.toString() == 'Filemom' && isFinishedFilemom ||
-            nameBook.key.toString() == 'Hebreus' && isFinishedHebreus ||
-            nameBook.key.toString() == 'Tiago' && isFinishedTiago ||
-            nameBook.key.toString() == '1 Pedro' && isFinished1Pedro ||
-            nameBook.key.toString() == '2 Pedro' && isFinished2Pedro ||
-            nameBook.key.toString() == '1 João' && isFinished1Joao ||
-            nameBook.key.toString() == '2 João' && isFinished2Joao ||
-            nameBook.key.toString() == '3 João' && isFinished3Joao ||
-            nameBook.key.toString() == 'Judas' && isFinishedJudas ||
-            nameBook.key.toString() == 'Apocalipse' && isFinishedApocalipse
+          )
+        : nameBook == 'Gênesis' && isFinishedGenesis ||
+              nameBook == 'Êxodo' && isFinishedExodus ||
+              nameBook == 'Levítico' && isFinishedLeviticus ||
+              nameBook == 'Números' && isFinishedNumbers ||
+              nameBook == 'Deuteronômio' && isFinishedDeuteronomy ||
+              nameBook == 'Josué' && isFinishedJosue ||
+              nameBook == 'Juízes' && isFinishedJudges ||
+              nameBook == 'Rute' && isFinishedRuth ||
+              nameBook == '1Samuel' && isFinished1Samuel ||
+              nameBook == '2Samuel' && isFinished2Samuel ||
+              nameBook == '1Reis' && isFinished1Reis ||
+              nameBook == '2Reis' && isFinished2Reis ||
+              nameBook == '1Crônicas' && isFinished1Cronicas ||
+              nameBook == '2Crônicas' && isFinished2Cronicas ||
+              nameBook == 'Esdras' && isFinishedEsdras ||
+              nameBook == 'Neemias' && isFinishedNeemias ||
+              nameBook == 'Ester' && isFinishedEster ||
+              nameBook == 'Jó' && isFinishedJo ||
+              nameBook == 'Salmos' && isFinishedSalmos ||
+              nameBook == 'Provérbios' && isFinishedProverbios ||
+              nameBook == 'Eclesiastes' && isFinishedEclesiastes ||
+              nameBook == 'Cântares' && isFinishedCantares ||
+              nameBook == 'Isaías' && isFinishedIsaias ||
+              nameBook == 'Jeremias' && isFinishedJeremias ||
+              nameBook == 'Lamentações' && isFinishedLamentacoes ||
+              nameBook == 'Ezequiel' && isFinishedEzequiel ||
+              nameBook == 'Daniel' && isFinishedDaniel ||
+              nameBook == 'Oséias' && isFinishedOseias ||
+              nameBook == 'Joel' && isFinishedJoel ||
+              nameBook == 'Amós' && isFinishedAmos ||
+              nameBook == 'Obadias' && isFinishedObadias ||
+              nameBook == 'Jonas' && isFinishedJonas ||
+              nameBook == 'Miquéias' && isFinishedMiqueias ||
+              nameBook == 'Naum' && isFinishedNaum ||
+              nameBook == 'Habacuque' && isFinishedHabacuque ||
+              nameBook == 'Sofonias' && isFinishedSofonias ||
+              nameBook == 'Ageu' && isFinishedAgeu ||
+              nameBook == 'Zacarias' && isFinishedZacarias ||
+              nameBook == 'Malaquias' && isFinishedMalaquias ||
+              nameBook == 'Mateus' && isFinishedMateus ||
+              nameBook == 'Marcos' && isFinishedMarcos ||
+              nameBook == 'Lucas' && isFinishedLucas ||
+              nameBook == 'João' && isFinishedJoao ||
+              nameBook == 'Atos' && isFinishedAtos ||
+              nameBook == 'Romanos' && isFinishedRomanos ||
+              nameBook == '1Coríntios' && isFinished1Corintios ||
+              nameBook == '2Coríntios' && isFinished2Corintios ||
+              nameBook == 'Gálatas' && isFinishedGalatas ||
+              nameBook == 'Efésios' && isFinishedEfesios ||
+              nameBook == 'Filipenses' && isFinishedFilipenses ||
+              nameBook == 'Colossenses' && isFinishedColossenses ||
+              nameBook == '1Tessalonicenses' && isFinished1Tessalonenses ||
+              nameBook == '2Tessalonicenses' && isFinished2Tessalonenses ||
+              nameBook == '1Timóteo' && isFinished1Timoteo ||
+              nameBook == '2Timóteo' && isFinished2Timoteo ||
+              nameBook == 'Tito' && isFinishedTito ||
+              nameBook == 'Filemom' && isFinishedFilemom ||
+              nameBook == 'Hebreus' && isFinishedHebreus ||
+              nameBook == 'Tiago' && isFinishedTiago ||
+              nameBook == '1 Pedro' && isFinished1Pedro ||
+              nameBook == '2 Pedro' && isFinished2Pedro ||
+              nameBook == '1 João' && isFinished1Joao ||
+              nameBook == '2 João' && isFinished2Joao ||
+              nameBook == '3 João' && isFinished3Joao ||
+              nameBook == 'Judas' && isFinishedJudas ||
+              nameBook == 'Apocalipse' && isFinishedApocalipse
         ? SafeArea(
-          child: Scaffold(
-            body: LayoutBuilder(
-              builder: (ctx, constraints) {
-                return Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        Theme.of(context).secondaryHeaderColor,
-                        Theme.of(context).primaryColor,
-                        Theme.of(context).secondaryHeaderColor,
-                      ],
+            child: Scaffold(
+              body: LayoutBuilder(
+                builder: (ctx, constraints) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                        colors: [
+                          Theme.of(context).secondaryHeaderColor,
+                          Theme.of(context).primaryColor,
+                          Theme.of(context).secondaryHeaderColor,
+                        ],
+                      ),
                     ),
-                  ),
-                  child: Center(
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        // Lottie.asset(
-                        //   'assets/congrats_animation.json', // Adicione uma animação JSON
-                        //   width: 700,
-                        //   height: 700,
-                        //   fit: BoxFit.contain,
-                        // ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              margin: const EdgeInsets.all(8.0),
-                              padding: const EdgeInsets.all(8.0),
-                              decoration: BoxDecoration(
-                                color: Colors.brown.withValues(alpha: 0.5),
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                              child: Text(
-                                '${'congratulationsBook'.tr()} ${nameBook.key == 'Gênesis'
-                                    ? 'Genesis'.tr()
-                                    : nameBook.key == 'Êxodo'
-                                    ? 'Exodus'.tr()
-                                    : nameBook.key == 'Levítico'
-                                    ? 'Leviticus'.tr()
-                                    : nameBook.key}.',
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'FredokaOne',
-                                  fontSize: 25, //constraints!.maxHeight * 0.06,
-                                  shadows: [
-                                    Shadow(
-                                      blurRadius: 7.0,
-                                      color: Colors.black,
-                                      offset: Offset(1.0, 1.0),
-                                    ),
-                                  ],
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                            ListTile(
-                              title: Container(
+                    child: Center(
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          // Lottie.asset(
+                          //   'assets/congrats_animation.json', // Adicione uma animação JSON
+                          //   width: 700,
+                          //   height: 700,
+                          //   fit: BoxFit.contain,
+                          // ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.all(8.0),
                                 decoration: BoxDecoration(
-                                  color: Colors.red.withValues(alpha: 0.5),
+                                  color: Colors.brown.withValues(alpha: 0.5),
                                   borderRadius: BorderRadius.circular(15.0),
                                 ),
                                 child: Text(
-                                  'resetIssues'.tr(),
-                                  style: TextStyle(
+                                  '${'congratulationsBook'.tr()} ${nameBook == 'Gênesis'
+                                      ? 'Genesis'.tr()
+                                      : nameBook == 'Êxodo'
+                                      ? 'Exodus'.tr()
+                                      : nameBook == 'Levítico'
+                                      ? 'Leviticus'.tr()
+                                      : nameBook}.',
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontFamily: 'FredokaOne',
                                     fontSize:
@@ -2596,558 +2845,576 @@ class _ChooseNumberBooksState extends State<ChooseNumberBooks> {
                                   textAlign: TextAlign.center,
                                 ),
                               ),
-                              onTap: () async {
-                                // Gênesis
-                                nameBook.key.toString() == 'Gênesis'
-                                    ? await resetProgressGenesis()
-                                    :
-                                    // Êxodo
-                                    nameBook.key.toString() == 'Êxodo'
-                                    ? await resetProgressExodus()
-                                    :
-                                    // Levítico
-                                    nameBook.key.toString() == 'Levítico'
-                                    ? await resetProgressLeviticus()
-                                    :
-                                    // Números
-                                    nameBook.key.toString() == 'Números'
-                                    ? await resetProgressNumbers()
-                                    :
-                                    // Deuteronômio
-                                    nameBook.key.toString() == 'Deuteronômio'
-                                    ? await resetProgressDeuteronomy()
-                                    :
-                                    // Josué
-                                    nameBook.key.toString() == 'Josué'
-                                    ? await resetProgressJosue()
-                                    :
-                                    // Juízes
-                                    nameBook.key.toString() == 'Juízes'
-                                    ? await resetProgressJudges()
-                                    :
-                                    // Rute
-                                    nameBook.key.toString() == 'Rute'
-                                    ? await resetProgressRuth()
-                                    :
-                                    // 1Samuel
-                                    nameBook.key.toString() == '1Samuel'
-                                    ? await resetProgress1Samuel()
-                                    :
-                                    // 2Samuel
-                                    nameBook.key.toString() == '2Samuel'
-                                    ? await resetProgress2Samuel()
-                                    :
-                                    // 1Reis
-                                    nameBook.key.toString() == '1Reis'
-                                    ? await resetProgress1Reis()
-                                    :
-                                    // 2Reis
-                                    nameBook.key.toString() == '2Reis'
-                                    ? await resetProgress2Reis()
-                                    :
-                                    // 1Crônicas
-                                    nameBook.key.toString() == '1Crônicas'
-                                    ? await resetProgress1Cronicas()
-                                    :
-                                    // 2Crônicas
-                                    nameBook.key.toString() == '2Crônicas'
-                                    ? await resetProgress2Cronicas()
-                                    :
-                                    // Esdras
-                                    nameBook.key.toString() == 'Esdras'
-                                    ? await resetProgressEsdras()
-                                    :
-                                    // Neemias
-                                    nameBook.key.toString() == 'Neemias'
-                                    ? await resetProgressNeemias()
-                                    :
-                                    // Ester
-                                    nameBook.key.toString() == 'Ester'
-                                    ? await resetProgressEster()
-                                    :
-                                    // Jó
-                                    nameBook.key.toString() == 'Jó'
-                                    ? await resetProgressJo()
-                                    :
-                                    // Salmos
-                                    nameBook.key.toString() == 'Salmos'
-                                    ? await resetProgressSalmos()
-                                    :
-                                    // Provérbios
-                                    nameBook.key.toString() == 'Provérbios'
-                                    ? await resetProgressProverbios()
-                                    :
-                                    // Eclesiastes
-                                    nameBook.key.toString() == 'Eclesiastes'
-                                    ? await resetProgressEclesiastes()
-                                    :
-                                    // Cântares
-                                    nameBook.key.toString() == 'Cântares'
-                                    ? await resetProgressCantares()
-                                    :
-                                    // Isaías
-                                    nameBook.key.toString() == 'Isaías'
-                                    ? await resetProgressIsaias()
-                                    :
-                                    // Jeremias
-                                    nameBook.key.toString() == 'Jeremias'
-                                    ? await resetProgressJeremias()
-                                    :
-                                    // Lamentações
-                                    nameBook.key.toString() == 'Lamentações'
-                                    ? await resetProgressLamentacoes()
-                                    :
-                                    // Ezequiel
-                                    nameBook.key.toString() == 'Ezequiel'
-                                    ? await resetProgressEzequiel()
-                                    :
-                                    // Daniel
-                                    nameBook.key.toString() == 'Daniel'
-                                    ? await resetProgressDaniel()
-                                    :
-                                    // Oseias
-                                    nameBook.key.toString() == 'Oséias'
-                                    ? await resetProgressOseias()
-                                    :
-                                    // Joel
-                                    nameBook.key.toString() == 'Joel'
-                                    ? await resetProgressJoel()
-                                    :
-                                    // Amos
-                                    nameBook.key.toString() == 'Amós'
-                                    ? await resetProgressAmos()
-                                    :
-                                    // Obadias
-                                    nameBook.key.toString() == 'Obadias'
-                                    ? await resetProgressObadias()
-                                    :
-                                    // Jonas
-                                    nameBook.key.toString() == 'Jonas'
-                                    ? await resetProgressJonas()
-                                    :
-                                    // Miquéias
-                                    nameBook.key.toString() == 'Miquéias'
-                                    ? await resetProgressMiqueias()
-                                    :
-                                    // Naum
-                                    nameBook.key.toString() == 'Naum'
-                                    ? await resetProgressNaum()
-                                    :
-                                    // Habacuque
-                                    nameBook.key.toString() == 'Habacuque'
-                                    ? await resetProgressHabacuque()
-                                    :
-                                    // Sofonias
-                                    nameBook.key.toString() == 'Sofonias'
-                                    ? await resetProgressSofonias()
-                                    :
-                                    // Ageu
-                                    nameBook.key.toString() == 'Ageu'
-                                    ? await resetProgressAgeu()
-                                    :
-                                    // Zacarias
-                                    nameBook.key.toString() == 'Zacarias'
-                                    ? await resetProgressZacarias()
-                                    :
-                                    // Malaquias
-                                    nameBook.key.toString() == 'Malaquias'
-                                    ? await resetProgressMalaquias()
-                                    :
-                                    // Mateus
-                                    nameBook.key.toString() == 'Mateus'
-                                    ? await resetProgressMateus()
-                                    :
-                                    // Marcos
-                                    nameBook.key.toString() == 'Marcos'
-                                    ? await resetProgressMarcos()
-                                    :
-                                    // Lucas
-                                    nameBook.key.toString() == 'Lucas'
-                                    ? await resetProgressLucas()
-                                    :
-                                    // João
-                                    nameBook.key.toString() == 'João'
-                                    ? await resetProgressJoao()
-                                    :
-                                    // Atos
-                                    nameBook.key.toString() == 'Atos'
-                                    ? await resetProgressAtos()
-                                    :
-                                    // Romanos
-                                    nameBook.key.toString() == 'Romanos'
-                                    ? await resetProgressRomanos()
-                                    :
-                                    // 1Coríntios
-                                    nameBook.key.toString() == '1Coríntios'
-                                    ? await resetProgress1Corintios()
-                                    :
-                                    // 2Coríntios
-                                    nameBook.key.toString() == '2Coríntios'
-                                    ? await resetProgress2Corintios()
-                                    :
-                                    // Gálatas
-                                    nameBook.key.toString() == 'Gálatas'
-                                    ? await resetProgressGalatas()
-                                    :
-                                    // Efésios
-                                    nameBook.key.toString() == 'Efésios'
-                                    ? await resetProgressEfesios()
-                                    :
-                                    // Filipenses
-                                    nameBook.key.toString() == 'Filipenses'
-                                    ? await resetProgressFilipenses()
-                                    :
-                                    // Colossenses
-                                    nameBook.key.toString() == 'Colossenses'
-                                    ? await resetProgressColossenses()
-                                    :
-                                    // 1Tessalonicenses
-                                    nameBook.key.toString() ==
-                                        '1Tessalonicenses'
-                                    ? await resetProgress1Tessalonenses()
-                                    :
-                                    // 2Tessalonicenses
-                                    nameBook.key.toString() ==
-                                        '2Tessalonicenses'
-                                    ? await resetProgress2Tessalonenses()
-                                    :
-                                    // 1Timóteo
-                                    nameBook.key.toString() == '1 Timóteo'
-                                    ? await resetProgress1Timoteo()
-                                    :
-                                    // 2Timóteo
-                                    nameBook.key.toString() == '2 Timóteo'
-                                    ? await resetProgress2Timoteo()
-                                    :
-                                    // Tito
-                                    nameBook.key.toString() == 'Tito'
-                                    ? await resetProgressTito()
-                                    :
-                                    // Filemom
-                                    nameBook.key.toString() == 'Filemom'
-                                    ? await resetProgressFilemom()
-                                    :
-                                    // Hebreus
-                                    nameBook.key.toString() == 'Hebreus'
-                                    ? await resetProgressHebreus()
-                                    :
-                                    // Tiago
-                                    nameBook.key.toString() == 'Tiago'
-                                    ? await resetProgressTiago()
-                                    :
-                                    // 1 Pedro
-                                    nameBook.key.toString() == '1 Pedro'
-                                    ? await resetProgress1Pedro()
-                                    :
-                                    // 2 Pedro
-                                    nameBook.key.toString() == '2 Pedro'
-                                    ? await resetProgress2Pedro()
-                                    :
-                                    // 1 João
-                                    nameBook.key.toString() == '1 João'
-                                    ? await resetProgress1Joao()
-                                    :
-                                    // 2 João
-                                    nameBook.key.toString() == '2 João'
-                                    ? await resetProgress2Joao()
-                                    :
-                                    // 3 João
-                                    nameBook.key.toString() == '3 João'
-                                    ? await resetProgress3Joao()
-                                    :
-                                    // Judas
-                                    nameBook.key.toString() == 'Judas'
-                                    ? await resetProgressJudas()
-                                    :
-                                    // Apocalipse
-                                    nameBook.key.toString() == 'Apocalipse'
-                                    ? await resetProgressApocalipse()
-                                    : null;
-                              },
-                            ),
-                          ],
-                        ),
-                      ],
+                              ListTile(
+                                title: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.red.withValues(alpha: 0.5),
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Text(
+                                    'resetIssues'.tr(),
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'FredokaOne',
+                                      fontSize:
+                                          25, //constraints!.maxHeight * 0.06,
+                                      shadows: [
+                                        Shadow(
+                                          blurRadius: 7.0,
+                                          color: Colors.black,
+                                          offset: Offset(1.0, 1.0),
+                                        ),
+                                      ],
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                onTap: () async {
+                                  // Gênesis
+                                  nameBook == 'Gênesis'
+                                      ? await resetProgressGenesis()
+                                      :
+                                        // Êxodo
+                                        nameBook == 'Êxodo'
+                                      ? await resetProgressExodus()
+                                      :
+                                        // Levítico
+                                        nameBook == 'Levítico'
+                                      ? await resetProgressLeviticus()
+                                      :
+                                        // Números
+                                        nameBook == 'Números'
+                                      ? await resetProgressNumbers()
+                                      :
+                                        // Deuteronômio
+                                        nameBook == 'Deuteronômio'
+                                      ? await resetProgressDeuteronomy()
+                                      :
+                                        // Josué
+                                        nameBook == 'Josué'
+                                      ? await resetProgressJosue()
+                                      :
+                                        // Juízes
+                                        nameBook == 'Juízes'
+                                      ? await resetProgressJudges()
+                                      :
+                                        // Rute
+                                        nameBook == 'Rute'
+                                      ? await resetProgressRuth()
+                                      :
+                                        // 1Samuel
+                                        nameBook == '1Samuel'
+                                      ? await resetProgress1Samuel()
+                                      :
+                                        // 2Samuel
+                                        nameBook == '2Samuel'
+                                      ? await resetProgress2Samuel()
+                                      :
+                                        // 1Reis
+                                        nameBook == '1Reis'
+                                      ? await resetProgress1Reis()
+                                      :
+                                        // 2Reis
+                                        nameBook == '2Reis'
+                                      ? await resetProgress2Reis()
+                                      :
+                                        // 1Crônicas
+                                        nameBook == '1Crônicas'
+                                      ? await resetProgress1Cronicas()
+                                      :
+                                        // 2Crônicas
+                                        nameBook == '2Crônicas'
+                                      ? await resetProgress2Cronicas()
+                                      :
+                                        // Esdras
+                                        nameBook == 'Esdras'
+                                      ? await resetProgressEsdras()
+                                      :
+                                        // Neemias
+                                        nameBook == 'Neemias'
+                                      ? await resetProgressNeemias()
+                                      :
+                                        // Ester
+                                        nameBook == 'Ester'
+                                      ? await resetProgressEster()
+                                      :
+                                        // Jó
+                                        nameBook == 'Jó'
+                                      ? await resetProgressJo()
+                                      :
+                                        // Salmos
+                                        nameBook == 'Salmos'
+                                      ? await resetProgressSalmos()
+                                      :
+                                        // Provérbios
+                                        nameBook == 'Provérbios'
+                                      ? await resetProgressProverbios()
+                                      :
+                                        // Eclesiastes
+                                        nameBook == 'Eclesiastes'
+                                      ? await resetProgressEclesiastes()
+                                      :
+                                        // Cântares
+                                        nameBook == 'Cântares'
+                                      ? await resetProgressCantares()
+                                      :
+                                        // Isaías
+                                        nameBook == 'Isaías'
+                                      ? await resetProgressIsaias()
+                                      :
+                                        // Jeremias
+                                        nameBook == 'Jeremias'
+                                      ? await resetProgressJeremias()
+                                      :
+                                        // Lamentações
+                                        nameBook == 'Lamentações'
+                                      ? await resetProgressLamentacoes()
+                                      :
+                                        // Ezequiel
+                                        nameBook == 'Ezequiel'
+                                      ? await resetProgressEzequiel()
+                                      :
+                                        // Daniel
+                                        nameBook == 'Daniel'
+                                      ? await resetProgressDaniel()
+                                      :
+                                        // Oseias
+                                        nameBook == 'Oséias'
+                                      ? await resetProgressOseias()
+                                      :
+                                        // Joel
+                                        nameBook == 'Joel'
+                                      ? await resetProgressJoel()
+                                      :
+                                        // Amos
+                                        nameBook == 'Amós'
+                                      ? await resetProgressAmos()
+                                      :
+                                        // Obadias
+                                        nameBook == 'Obadias'
+                                      ? await resetProgressObadias()
+                                      :
+                                        // Jonas
+                                        nameBook == 'Jonas'
+                                      ? await resetProgressJonas()
+                                      :
+                                        // Miquéias
+                                        nameBook == 'Miquéias'
+                                      ? await resetProgressMiqueias()
+                                      :
+                                        // Naum
+                                        nameBook == 'Naum'
+                                      ? await resetProgressNaum()
+                                      :
+                                        // Habacuque
+                                        nameBook == 'Habacuque'
+                                      ? await resetProgressHabacuque()
+                                      :
+                                        // Sofonias
+                                        nameBook == 'Sofonias'
+                                      ? await resetProgressSofonias()
+                                      :
+                                        // Ageu
+                                        nameBook == 'Ageu'
+                                      ? await resetProgressAgeu()
+                                      :
+                                        // Zacarias
+                                        nameBook == 'Zacarias'
+                                      ? await resetProgressZacarias()
+                                      :
+                                        // Malaquias
+                                        nameBook == 'Malaquias'
+                                      ? await resetProgressMalaquias()
+                                      :
+                                        // Mateus
+                                        nameBook == 'Mateus'
+                                      ? await resetProgressMateus()
+                                      :
+                                        // Marcos
+                                        nameBook == 'Marcos'
+                                      ? await resetProgressMarcos()
+                                      :
+                                        // Lucas
+                                        nameBook == 'Lucas'
+                                      ? await resetProgressLucas()
+                                      :
+                                        // João
+                                        nameBook == 'João'
+                                      ? await resetProgressJoao()
+                                      :
+                                        // Atos
+                                        nameBook == 'Atos'
+                                      ? await resetProgressAtos()
+                                      :
+                                        // Romanos
+                                        nameBook == 'Romanos'
+                                      ? await resetProgressRomanos()
+                                      :
+                                        // 1Coríntios
+                                        nameBook == '1Coríntios'
+                                      ? await resetProgress1Corintios()
+                                      :
+                                        // 2Coríntios
+                                        nameBook == '2Coríntios'
+                                      ? await resetProgress2Corintios()
+                                      :
+                                        // Gálatas
+                                        nameBook == 'Gálatas'
+                                      ? await resetProgressGalatas()
+                                      :
+                                        // Efésios
+                                        nameBook == 'Efésios'
+                                      ? await resetProgressEfesios()
+                                      :
+                                        // Filipenses
+                                        nameBook == 'Filipenses'
+                                      ? await resetProgressFilipenses()
+                                      :
+                                        // Colossenses
+                                        nameBook == 'Colossenses'
+                                      ? await resetProgressColossenses()
+                                      :
+                                        // 1Tessalonicenses
+                                        nameBook == '1Tessalonicenses'
+                                      ? await resetProgress1Tessalonenses()
+                                      :
+                                        // 2Tessalonicenses
+                                        nameBook == '2Tessalonicenses'
+                                      ? await resetProgress2Tessalonenses()
+                                      :
+                                        // 1Timóteo
+                                        nameBook == '1 Timóteo'
+                                      ? await resetProgress1Timoteo()
+                                      :
+                                        // 2Timóteo
+                                        nameBook == '2 Timóteo'
+                                      ? await resetProgress2Timoteo()
+                                      :
+                                        // Tito
+                                        nameBook == 'Tito'
+                                      ? await resetProgressTito()
+                                      :
+                                        // Filemom
+                                        nameBook == 'Filemom'
+                                      ? await resetProgressFilemom()
+                                      :
+                                        // Hebreus
+                                        nameBook == 'Hebreus'
+                                      ? await resetProgressHebreus()
+                                      :
+                                        // Tiago
+                                        nameBook == 'Tiago'
+                                      ? await resetProgressTiago()
+                                      :
+                                        // 1 Pedro
+                                        nameBook == '1 Pedro'
+                                      ? await resetProgress1Pedro()
+                                      :
+                                        // 2 Pedro
+                                        nameBook == '2 Pedro'
+                                      ? await resetProgress2Pedro()
+                                      :
+                                        // 1 João
+                                        nameBook == '1 João'
+                                      ? await resetProgress1Joao()
+                                      :
+                                        // 2 João
+                                        nameBook == '2 João'
+                                      ? await resetProgress2Joao()
+                                      :
+                                        // 3 João
+                                        nameBook == '3 João'
+                                      ? await resetProgress3Joao()
+                                      :
+                                        // Judas
+                                        nameBook == 'Judas'
+                                      ? await resetProgressJudas()
+                                      :
+                                        // Apocalipse
+                                        nameBook == 'Apocalipse'
+                                      ? await resetProgressApocalipse()
+                                      : null;
+                                },
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
-          ),
-        )
+          )
         : BookQuestions(
-          nameBook: nameBook.key,
-          nextQuestion:
-              nameBook.key.toString() == 'Gênesis'
-                  ? nextQuestionGenesis
-                  : nameBook.key.toString() == 'Êxodo'
-                  ? nextQuestionExodus
-                  : nameBook.key.toString() == 'Levítico'
-                  ? nextQuestionLeviticus
-                  : nameBook.key.toString() == 'Números'
-                  ? nextQuestionNumbers
-                  : nameBook.key.toString() == 'Deuteronômio'
-                  ? nextQuestionDeuteronomy
-                  : nameBook.key.toString() == 'Josué'
-                  ? nextQuestionJosue
-                  : nameBook.key.toString() == 'Juízes'
-                  ? nextQuestionJudges
-                  : nameBook.key.toString() == 'Rute'
-                  ? nextQuestionRuth
-                  : nameBook.key.toString() == '1Samuel'
-                  ? nextQuestion1Samuel
-                  : nameBook.key.toString() == '2Samuel'
-                  ? nextQuestion2Samuel
-                  : nameBook.key.toString() == '1Reis'
-                  ? nextQuestion1Reis
-                  : nameBook.key.toString() == '2Reis'
-                  ? nextQuestion2Reis
-                  : nameBook.key.toString() == '1Crônicas'
-                  ? nextQuestion1Cronicas
-                  : nameBook.key.toString() == '2Crônicas'
-                  ? nextQuestion2Cronicas
-                  : nameBook.key.toString() == 'Esdras'
-                  ? nextQuestionEsdras
-                  : nameBook.key.toString() == 'Neemias'
-                  ? nextQuestionNeemias
-                  : nameBook.key.toString() == 'Ester'
-                  ? nextQuestionEster
-                  : nameBook.key.toString() == 'Jó'
-                  ? nextQuestionJo
-                  : nameBook.key.toString() == 'Salmos'
-                  ? nextQuestionSalmos
-                  : nameBook.key.toString() == 'Provérbios'
-                  ? nextQuestionProverbios
-                  : nameBook.key.toString() == 'Eclesiastes'
-                  ? nextQuestionEclesiastes
-                  : nameBook.key.toString() == 'Cântares'
-                  ? nextQuestionCantares
-                  : nameBook.key.toString() == 'Isaías'
-                  ? nextQuestionIsaias
-                  : nameBook.key.toString() == 'Jeremias'
-                  ? nextQuestionJeremias
-                  : nameBook.key.toString() == 'Lamentações'
-                  ? nextQuestionLamentacoes
-                  : nameBook.key.toString() == 'Ezequiel'
-                  ? nextQuestionEzequiel
-                  : nameBook.key.toString() == 'Daniel'
-                  ? nextQuestionDaniel
-                  : nameBook.key.toString() == 'Oséias'
-                  ? nextQuestionOseias
-                  : nameBook.key.toString() == 'Joel'
-                  ? nextQuestionJoel
-                  : nameBook.key.toString() == 'Amós'
-                  ? nextQuestionAmos
-                  : nameBook.key.toString() == 'Obadias'
-                  ? nextQuestionObadias
-                  : nameBook.key.toString() == 'Jonas'
-                  ? nextQuestionJonas
-                  : nameBook.key.toString() == 'Miquéias'
-                  ? nextQuestionMiqueias
-                  : nameBook.key.toString() == 'Naum'
-                  ? nextQuestionNaum
-                  : nameBook.key.toString() == 'Habacuque'
-                  ? nextQuestionHabacuque
-                  : nameBook.key.toString() == 'Sofonias'
-                  ? nextQuestionSofonias
-                  : nameBook.key.toString() == 'Ageu'
-                  ? nextQuestionAgeu
-                  : nameBook.key.toString() == 'Zacarias'
-                  ? nextQuestionZacarias
-                  : nameBook.key.toString() == 'Malaquias'
-                  ? nextQuestionMalaquias
-                  : nameBook.key.toString() == 'Mateus'
-                  ? nextQuestionMateus
-                  : nameBook.key.toString() == 'Marcos'
-                  ? nextQuestionMarcos
-                  : nameBook.key.toString() == 'Lucas'
-                  ? nextQuestionLucas
-                  : nameBook.key.toString() == 'João'
-                  ? nextQuestionJoao
-                  : nameBook.key.toString() == 'Atos'
-                  ? nextQuestionAtos
-                  : nameBook.key.toString() == 'Romanos'
-                  ? nextQuestionRomanos
-                  : nameBook.key.toString() == '1Coríntios'
-                  ? nextQuestion1Corintios
-                  : nameBook.key.toString() == '2Coríntios'
-                  ? nextQuestion2Corintios
-                  : nameBook.key.toString() == 'Gálatas'
-                  ? nextQuestionGalatas
-                  : nameBook.key.toString() == 'Efésios'
-                  ? nextQuestionEfesios
-                  : nameBook.key.toString() == 'Filipenses'
-                  ? nextQuestionFilipenses
-                  : nameBook.key.toString() == 'Colossenses'
-                  ? nextQuestionColossenses
-                  : nameBook.key.toString() == '1Tessalonicenses'
-                  ? nextQuestion1Tessalonenses
-                  : nameBook.key.toString() == '2Tessalonicenses'
-                  ? nextQuestion2Tessalonenses
-                  : nameBook.key.toString() == '1 Timóteo'
-                  ? nextQuestion1Timoteo
-                  : nameBook.key.toString() == '2 Timóteo'
-                  ? nextQuestion2Timoteo
-                  : nameBook.key.toString() == 'Tito'
-                  ? nextQuestionTito
-                  : nameBook.key.toString() == 'Filemom'
-                  ? nextQuestionFilemom
-                  : nameBook.key.toString() == 'Hebreus'
-                  ? nextQuestionHebreus
-                  : nameBook.key.toString() == 'Tiago'
-                  ? nextQuestionTiago
-                  : nameBook.key.toString() == '1 Pedro'
-                  ? nextQuestion1Pedro
-                  : nameBook.key.toString() == '2 Pedro'
-                  ? nextQuestion2Pedro
-                  : nameBook.key.toString() == '1 João'
-                  ? nextQuestion1Joao
-                  : nameBook.key.toString() == '2 João'
-                  ? nextQuestion2Joao
-                  : nameBook.key.toString() == '3 João'
-                  ? nextQuestion3Joao
-                  : nameBook.key.toString() == 'Judas'
-                  ? nextQuestionJudas
-                  : nameBook.key.toString() == 'Apocalipse'
-                  ? nextQuestionApocalipse
-                  : null,
-          mockGameData:
-              nameBook.key.toString() == 'Gênesis'
-                  ? mockGameData.genesis[currentQuestionIndexGenesis]
-                  : nameBook.key.toString() == 'Êxodo'
-                  ? mockGameData.exodus[currentQuestionIndexExodus]
-                  : nameBook.key.toString() == 'Levítico'
-                  ? mockGameData.leviticus[currentQuestionIndexLeviticus]
-                  : nameBook.key.toString() == 'Números'
-                  ? mockGameData.numbers[currentQuestionIndexNumbers]
-                  : nameBook.key.toString() == 'Deuteronômio'
-                  ? mockGameData.deuteronomy[currentQuestionIndexDeuteronomy]
-                  : nameBook.key.toString() == 'Josué'
-                  ? mockGameData.josue[currentQuestionIndexJosue]
-                  : nameBook.key.toString() == 'Juízes'
-                  ? mockGameData.judges[currentQuestionIndexJudges]
-                  : nameBook.key.toString() == 'Rute'
-                  ? mockGameData.ruth[currentQuestionIndexRuth]
-                  : nameBook.key.toString() == '1Samuel'
-                  ? mockGameData.samuel1[currentQuestionIndex1Samuel]
-                  : nameBook.key.toString() == '2Samuel'
-                  ? mockGameData.samuel2[currentQuestionIndex2Samuel]
-                  : nameBook.key.toString() == '1Reis'
-                  ? mockGameData.kings1[currentQuestionIndex1Reis]
-                  : nameBook.key.toString() == '2Reis'
-                  ? mockGameData.kings2[currentQuestionIndex2Reis]
-                  : nameBook.key.toString() == '1Crônicas'
-                  ? mockGameData.chronicles1[currentQuestionIndex1Cronicas]
-                  : nameBook.key.toString() == '2Crônicas'
-                  ? mockGameData.chronicles2[currentQuestionIndex2Cronicas]
-                  : nameBook.key.toString() == 'Esdras'
-                  ? mockGameData.ezra[currentQuestionIndexEsdras]
-                  : nameBook.key.toString() == 'Neemias'
-                  ? mockGameData.nehemiah[currentQuestionIndexNeemias]
-                  : nameBook.key.toString() == 'Ester'
-                  ? mockGameData.ester[currentQuestionIndexEster]
-                  : nameBook.key.toString() == 'Jó'
-                  ? mockGameData.job[currentQuestionIndexJo]
-                  : nameBook.key.toString() == 'Salmos'
-                  ? mockGameData.psalms[currentQuestionIndexSalmos]
-                  : nameBook.key.toString() == 'Provérbios'
-                  ? mockGameData.proverbs[currentQuestionIndexProverbios]
-                  : nameBook.key.toString() == 'Eclesiastes'
-                  ? mockGameData.ecclesiastes[currentQuestionIndexEclesiastes]
-                  : nameBook.key.toString() == 'Cântares'
-                  ? mockGameData.songs[currentQuestionIndexCantares]
-                  : nameBook.key.toString() == 'Isaías'
-                  ? mockGameData.isaiah[currentQuestionIndexIsaias]
-                  : nameBook.key.toString() == 'Jeremias'
-                  ? mockGameData.jeremiah[currentQuestionIndexJeremias]
-                  : nameBook.key.toString() == 'Lamentações'
-                  ? mockGameData.lamentations[currentQuestionIndexLamentacoes]
-                  : nameBook.key.toString() == 'Ezequiel'
-                  ? mockGameData.ezequiel[currentQuestionIndexEzequiel]
-                  : nameBook.key.toString() == 'Daniel'
-                  ? mockGameData.daniel[currentQuestionIndexDaniel]
-                  : nameBook.key.toString() == 'Oséias'
-                  ? mockGameData.hosea[currentQuestionIndexOseias]
-                  : nameBook.key.toString() == 'Joel'
-                  ? mockGameData.joel[currentQuestionIndexJoel]
-                  : nameBook.key.toString() == 'Amós'
-                  ? mockGameData.amos[currentQuestionIndexAmos]
-                  : nameBook.key.toString() == 'Obadias'
-                  ? mockGameData.obadiah[currentQuestionIndexObadias]
-                  : nameBook.key.toString() == 'Jonas'
-                  ? mockGameData.jonah[currentQuestionIndexJonas]
-                  : nameBook.key.toString() == 'Miquéias'
-                  ? mockGameData.micah[currentQuestionIndexMiqueias]
-                  : nameBook.key.toString() == 'Naum'
-                  ? mockGameData.no[currentQuestionIndexNaum]
-                  : nameBook.key.toString() == 'Habacuque'
-                  ? mockGameData.habakkuk[currentQuestionIndexHabacuque]
-                  : nameBook.key.toString() == 'Sofonias'
-                  ? mockGameData.zephanies[currentQuestionIndexSofonias]
-                  : nameBook.key.toString() == 'Ageu'
-                  ? mockGameData.haggai[currentQuestionIndexAgeu]
-                  : nameBook.key.toString() == 'Zacarias'
-                  ? mockGameData.zechariah[currentQuestionIndexZacarias]
-                  : nameBook.key.toString() == 'Malaquias'
-                  ? mockGameData.malachi[currentQuestionIndexMalaquias]
-                  : nameBook.key.toString() == 'Mateus'
-                  ? mockGameData.mateus[currentQuestionIndexMateus]
-                  : nameBook.key.toString() == 'Marcos'
-                  ? mockGameData.frames[currentQuestionIndexMarcos]
-                  : nameBook.key.toString() == 'Lucas'
-                  ? mockGameData.lucas[currentQuestionIndexLucas]
-                  : nameBook.key.toString() == 'João'
-                  ? mockGameData.john[currentQuestionIndexJoao]
-                  : nameBook.key.toString() == 'Atos'
-                  ? mockGameData.john[currentQuestionIndexAtos]
-                  : nameBook.key.toString() == 'Romanos'
-                  ? mockGameData.romans[currentQuestionIndexRomanos]
-                  : nameBook.key.toString() == '1Coríntios'
-                  ? mockGameData.corinthians1[currentQuestionIndex1Corintios]
-                  : nameBook.key.toString() == '2Coríntios'
-                  ? mockGameData.corinthians2[currentQuestionIndex2Corintios]
-                  : nameBook.key.toString() == 'Gálatas'
-                  ? mockGameData.galatians[currentQuestionIndexGalatas]
-                  : nameBook.key.toString() == 'Efésios'
-                  ? mockGameData.ephesians[currentQuestionIndexEfesios]
-                  : nameBook.key.toString() == 'Filipenses'
-                  ? mockGameData.philippians[currentQuestionIndexFilipenses]
-                  : nameBook.key.toString() == 'Colossenses'
-                  ? mockGameData.colossians[currentQuestionIndexColossenses]
-                  : nameBook.key.toString() == '1Tessalonicenses'
-                  ? mockGameData
-                      .thessalonians1[currentQuestionIndex1Tessalonenses]
-                  : nameBook.key.toString() == '2Tessalonicenses'
-                  ? mockGameData
-                      .thessalonians2[currentQuestionIndex2Tessalonenses]
-                  : nameBook.key.toString() == '1 Timóteo'
-                  ? mockGameData.timothy1[currentQuestionIndex1Timoteo]
-                  : nameBook.key.toString() == '2 Timóteo'
-                  ? mockGameData.timothy2[currentQuestionIndex2Timoteo]
-                  : nameBook.key.toString() == 'Tito'
-                  ? mockGameData.tito[currentQuestionIndexTito]
-                  : nameBook.key.toString() == 'Filemom'
-                  ? mockGameData.philemon[currentQuestionIndexFilemom]
-                  : nameBook.key.toString() == 'Hebreus'
-                  ? mockGameData.hebrews[currentQuestionIndexHebreus]
-                  : nameBook.key.toString() == 'Tiago'
-                  ? mockGameData.tiago[currentQuestionIndexTiago]
-                  : nameBook.key.toString() == '1 Pedro'
-                  ? mockGameData.peter1[currentQuestionIndex1Pedro]
-                  : nameBook.key.toString() == '2 Pedro'
-                  ? mockGameData.peter2[currentQuestionIndex2Pedro]
-                  : nameBook.key.toString() == '1 João'
-                  ? mockGameData.john1[currentQuestionIndex1Joao]
-                  : nameBook.key.toString() == '2 João'
-                  ? mockGameData.john2[currentQuestionIndex2Joao]
-                  : nameBook.key.toString() == '3 João'
-                  ? mockGameData.john3[currentQuestionIndex3Joao]
-                  : nameBook.key.toString() == 'Judas'
-                  ? mockGameData.judas[currentQuestionIndexJudas]
-                  : nameBook.key.toString() == 'Apocalipse'
-                  ? mockGameData.apocalypse[currentQuestionIndexApocalipse]
-                  : null,
-        );
+            nameBook: nameBook,
+            nextQuestion: nameBook == 'Gênesis'
+                ? nextQuestionGenesis
+                : nameBook == 'Êxodo'
+                ? nextQuestionExodus
+                : nameBook == 'Levítico'
+                ? nextQuestionLeviticus
+                : nameBook == 'Números'
+                ? nextQuestionNumbers
+                : nameBook == 'Deuteronômio'
+                ? nextQuestionDeuteronomy
+                : nameBook == 'Josué'
+                ? nextQuestionJosue
+                : nameBook == 'Juízes'
+                ? nextQuestionJudges
+                : nameBook == 'Rute'
+                ? nextQuestionRuth
+                : nameBook == '1Samuel'
+                ? nextQuestion1Samuel
+                : nameBook == '2Samuel'
+                ? nextQuestion2Samuel
+                : nameBook == '1Reis'
+                ? nextQuestion1Reis
+                : nameBook == '2Reis'
+                ? nextQuestion2Reis
+                : nameBook == '1Crônicas'
+                ? nextQuestion1Cronicas
+                : nameBook == '2Crônicas'
+                ? nextQuestion2Cronicas
+                : nameBook == 'Esdras'
+                ? nextQuestionEsdras
+                : nameBook == 'Neemias'
+                ? nextQuestionNeemias
+                : nameBook == 'Ester'
+                ? nextQuestionEster
+                : nameBook == 'Jó'
+                ? nextQuestionJo
+                : nameBook == 'Salmos'
+                ? nextQuestionSalmos
+                : nameBook == 'Provérbios'
+                ? nextQuestionProverbios
+                : nameBook == 'Eclesiastes'
+                ? nextQuestionEclesiastes
+                : nameBook == 'Cântares'
+                ? nextQuestionCantares
+                : nameBook == 'Isaías'
+                ? nextQuestionIsaias
+                : nameBook == 'Jeremias'
+                ? nextQuestionJeremias
+                : nameBook == 'Lamentações'
+                ? nextQuestionLamentacoes
+                : nameBook == 'Ezequiel'
+                ? nextQuestionEzequiel
+                : nameBook == 'Daniel'
+                ? nextQuestionDaniel
+                : nameBook == 'Oséias'
+                ? nextQuestionOseias
+                : nameBook == 'Joel'
+                ? nextQuestionJoel
+                : nameBook == 'Amós'
+                ? nextQuestionAmos
+                : nameBook == 'Obadias'
+                ? nextQuestionObadias
+                : nameBook == 'Jonas'
+                ? nextQuestionJonas
+                : nameBook == 'Miquéias'
+                ? nextQuestionMiqueias
+                : nameBook == 'Naum'
+                ? nextQuestionNaum
+                : nameBook == 'Habacuque'
+                ? nextQuestionHabacuque
+                : nameBook == 'Sofonias'
+                ? nextQuestionSofonias
+                : nameBook == 'Ageu'
+                ? nextQuestionAgeu
+                : nameBook == 'Zacarias'
+                ? nextQuestionZacarias
+                : nameBook == 'Malaquias'
+                ? nextQuestionMalaquias
+                : nameBook == 'Mateus'
+                ? nextQuestionMateus
+                : nameBook == 'Marcos'
+                ? nextQuestionMarcos
+                : nameBook == 'Lucas'
+                ? nextQuestionLucas
+                : nameBook == 'João'
+                ? nextQuestionJoao
+                : nameBook == 'Atos'
+                ? nextQuestionAtos
+                : nameBook == 'Romanos'
+                ? nextQuestionRomanos
+                : nameBook == '1Coríntios'
+                ? nextQuestion1Corintios
+                : nameBook == '2Coríntios'
+                ? nextQuestion2Corintios
+                : nameBook == 'Gálatas'
+                ? nextQuestionGalatas
+                : nameBook == 'Efésios'
+                ? nextQuestionEfesios
+                : nameBook == 'Filipenses'
+                ? nextQuestionFilipenses
+                : nameBook == 'Colossenses'
+                ? nextQuestionColossenses
+                : nameBook == '1Tessalonicenses'
+                ? nextQuestion1Tessalonenses
+                : nameBook == '2Tessalonicenses'
+                ? nextQuestion2Tessalonenses
+                : nameBook == '1 Timóteo'
+                ? nextQuestion1Timoteo
+                : nameBook == '2 Timóteo'
+                ? nextQuestion2Timoteo
+                : nameBook == 'Tito'
+                ? nextQuestionTito
+                : nameBook == 'Filemom'
+                ? nextQuestionFilemom
+                : nameBook == 'Hebreus'
+                ? nextQuestionHebreus
+                : nameBook == 'Tiago'
+                ? nextQuestionTiago
+                : nameBook == '1 Pedro'
+                ? nextQuestion1Pedro
+                : nameBook == '2 Pedro'
+                ? nextQuestion2Pedro
+                : nameBook == '1 João'
+                ? nextQuestion1Joao
+                : nameBook == '2 João'
+                ? nextQuestion2Joao
+                : nameBook == '3 João'
+                ? nextQuestion3Joao
+                : nameBook == 'Judas'
+                ? nextQuestionJudas
+                : nameBook == 'Apocalipse'
+                ? nextQuestionApocalipse
+                : null,
+            mockGameData: nameBook == 'Gênesis'
+                ? genesis[currentQuestionIndexGenesis]
+                : nameBook == 'Êxodo'
+                ? exodus[currentQuestionIndexExodus]
+                : nameBook == 'Levítico'
+                ? leviticus[currentQuestionIndexLeviticus]
+                : nameBook == 'Números'
+                ? numbers[currentQuestionIndexNumbers]
+                : nameBook == 'Deuteronômio'
+                ? deuteronomy[currentQuestionIndexDeuteronomy]
+                : nameBook == 'Josué'
+                ? josue[currentQuestionIndexJosue]
+                : nameBook == 'Juízes'
+                ? judges[currentQuestionIndexJudges]
+                : nameBook == 'Rute'
+                ? ruth[currentQuestionIndexRuth]
+                : nameBook == '1Samuel'
+                ? samuel1[currentQuestionIndex1Samuel]
+                : nameBook == '2Samuel'
+                ? samuel2[currentQuestionIndex2Samuel]
+                : nameBook == '1Reis'
+                ? kings1[currentQuestionIndex1Reis]
+                : nameBook == '2Reis'
+                ? kings2[currentQuestionIndex2Reis]
+                : nameBook == '1Crônicas'
+                ? chronicles1[currentQuestionIndex1Cronicas]
+                : nameBook == '2Crônicas'
+                ? chronicles2[currentQuestionIndex2Cronicas]
+                : nameBook == 'Esdras'
+                ? ezra[currentQuestionIndexEsdras]
+                : nameBook == 'Neemias'
+                ? nehemiah[currentQuestionIndexNeemias]
+                : nameBook == 'Ester'
+                ? ester[currentQuestionIndexEster]
+                : nameBook == 'Jó'
+                ? job[currentQuestionIndexJo]
+                : nameBook == 'Salmos'
+                ? psalms[currentQuestionIndexSalmos]
+                : nameBook == 'Provérbios'
+                ? proverbs[currentQuestionIndexProverbios]
+                : nameBook == 'Eclesiastes'
+                ? ecclesiastes[currentQuestionIndexEclesiastes]
+                : nameBook == 'Cântares'
+                ? songs[currentQuestionIndexCantares]
+                : nameBook == 'Isaías'
+                ? isaiah[currentQuestionIndexIsaias]
+                : nameBook == 'Jeremias'
+                ? jeremiah[currentQuestionIndexJeremias]
+                : nameBook == 'Lamentações'
+                ? lamentations[currentQuestionIndexLamentacoes]
+                : nameBook == 'Ezequiel'
+                ? ezequiel[currentQuestionIndexEzequiel]
+                : nameBook == 'Daniel'
+                ? daniel[currentQuestionIndexDaniel]
+                : nameBook == 'Oséias'
+                ? hosea[currentQuestionIndexOseias]
+                : nameBook == 'Joel'
+                ? joel[currentQuestionIndexJoel]
+                : nameBook == 'Amós'
+                ? amos[currentQuestionIndexAmos]
+                : nameBook == 'Obadias'
+                ? obadiah[currentQuestionIndexObadias]
+                : nameBook == 'Jonas'
+                ? jonah[currentQuestionIndexJonas]
+                : nameBook == 'Miquéias'
+                ? micah[currentQuestionIndexMiqueias]
+                : nameBook == 'Naum'
+                ? no[currentQuestionIndexNaum]
+                : nameBook == 'Habacuque'
+                ? habakkuk[currentQuestionIndexHabacuque]
+                : nameBook == 'Sofonias'
+                ? zephanies[currentQuestionIndexSofonias]
+                : nameBook == 'Ageu'
+                ? haggai[currentQuestionIndexAgeu]
+                : nameBook == 'Zacarias'
+                ? zechariah[currentQuestionIndexZacarias]
+                : nameBook == 'Malaquias'
+                ? malachi[currentQuestionIndexMalaquias]
+                : nameBook == 'Mateus'
+                ? mateus[currentQuestionIndexMateus]
+                : nameBook == 'Marcos'
+                ? frames[currentQuestionIndexMarcos]
+                : nameBook == 'Lucas'
+                ? lucas[currentQuestionIndexLucas]
+                : nameBook == 'João'
+                ? john[currentQuestionIndexJoao]
+                : nameBook == 'Atos'
+                ? acts[currentQuestionIndexAtos]
+                : nameBook == 'Romanos'
+                ? romans[currentQuestionIndexRomanos]
+                : nameBook == '1Coríntios'
+                ? corinthians1[currentQuestionIndex1Corintios]
+                : nameBook == '2Coríntios'
+                ? corinthians2[currentQuestionIndex2Corintios]
+                : nameBook == 'Gálatas'
+                ? galatians[currentQuestionIndexGalatas]
+                : nameBook == 'Efésios'
+                ? ephesians[currentQuestionIndexEfesios]
+                : nameBook == 'Filipenses'
+                ? philippians[currentQuestionIndexFilipenses]
+                : nameBook == 'Colossenses'
+                ? colossians[currentQuestionIndexColossenses]
+                : nameBook == '1Tessalonicenses'
+                ? thessalonians1[currentQuestionIndex1Tessalonenses]
+                : nameBook == '2Tessalonicenses'
+                ? thessalonians2[currentQuestionIndex2Tessalonenses]
+                : nameBook == '1 Timóteo'
+                ? timothy1[currentQuestionIndex1Timoteo]
+                : nameBook == '2 Timóteo'
+                ? timothy2[currentQuestionIndex2Timoteo]
+                : nameBook == 'Tito'
+                ? tito[currentQuestionIndexTito]
+                : nameBook == 'Filemom'
+                ? philemon[currentQuestionIndexFilemom]
+                : nameBook == 'Hebreus'
+                ? hebrews[currentQuestionIndexHebreus]
+                : nameBook == 'Tiago'
+                ? tiago[currentQuestionIndexTiago]
+                : nameBook == '1 Pedro'
+                ? peter1[currentQuestionIndex1Pedro]
+                : nameBook == '2 Pedro'
+                ? peter2[currentQuestionIndex2Pedro]
+                : nameBook == '1 João'
+                ? john1[currentQuestionIndex1Joao]
+                : nameBook == '2 João'
+                ? john2[currentQuestionIndex2Joao]
+                : nameBook == '3 João'
+                ? john3[currentQuestionIndex3Joao]
+                : nameBook == 'Judas'
+                ? judas[currentQuestionIndexJudas]
+                : nameBook == 'Apocalipse'
+                ? apocalypse[currentQuestionIndexApocalipse]
+                : null,
+          );
   }
 }
 
@@ -3201,47 +3468,182 @@ class _BookQuestionsState extends State<BookQuestions>
   Widget build(BuildContext context) {
     return widget.mockGameData != null
         ? SafeArea(
-          child: Scaffold(
-            appBar: PreferredSize(
-              preferredSize: const Size.fromHeight(55.0),
-              child: AppBarDefault(
-                text: '${'question'.tr()} ${widget.mockGameData?.id}',
-                fontFamily: 'Times New Roman',
-                actions: [
-                  IconButton(
-                    icon: Icon(
-                      _isTimerPauseOrPlay ? Icons.pause : Icons.play_arrow,
+            child: Scaffold(
+              appBar: PreferredSize(
+                preferredSize: const Size.fromHeight(55.0),
+                child: AppBarDefault(
+                  text: '${'question'.tr()} ${widget.mockGameData?.id}',
+                  fontFamily: 'Times New Roman',
+                  actions: [
+                    IconButton(
+                      icon: Icon(
+                        _isTimerPauseOrPlay ? Icons.pause : Icons.play_arrow,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _isTimerPauseOrPlay = !_isTimerPauseOrPlay;
+                          if (_isTimerPauseOrPlay) {
+                            _controller.start();
+                          } else {
+                            _controller.pause();
+                          }
+                          _isTimerVisible = true;
+                        });
+                      },
                     ),
-                    onPressed: () {
-                      setState(() {
-                        _isTimerPauseOrPlay = !_isTimerPauseOrPlay;
-                        if (_isTimerPauseOrPlay) {
-                          _controller.start();
-                        } else {
-                          _controller.pause();
-                        }
-                        _isTimerVisible = true;
-                      });
-                    },
-                  ),
-                  IconButton(
-                    onPressed:
-                        () async => await _speak(
-                          "${widget.mockGameData?.question!.substring(3)}."
-                          "${'alternativeA'.tr()} ${widget.mockGameData?.alternatives1!.substring(2)}."
-                          "${'alternativeB'.tr()} ${widget.mockGameData?.alternatives2!.substring(2)}."
-                          "${'alternativeC'.tr()} ${widget.mockGameData?.alternatives3!.substring(2)}.",
-                          context,
+                    IconButton(
+                      onPressed: () async => await _speak(
+                        "${widget.mockGameData?.question!.substring(3)}."
+                        "${'alternativeA'.tr()} ${widget.mockGameData?.alternatives1!.substring(2)}."
+                        "${'alternativeB'.tr()} ${widget.mockGameData?.alternatives2!.substring(2)}."
+                        "${'alternativeC'.tr()} ${widget.mockGameData?.alternatives3!.substring(2)}.",
+                        context,
+                      ),
+                      icon: const Icon(Icons.volume_up),
+                    ),
+                    IconButton(
+                      onPressed: widget.nextQuestion,
+                      icon: const Icon(Icons.arrow_forward),
+                    ),
+                  ],
+                ),
+              ),
+              body: LayoutBuilder(
+                builder: (ctx, constraints) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                        colors: [
+                          Theme.of(context).secondaryHeaderColor,
+                          Theme.of(context).primaryColor,
+                          Theme.of(context).secondaryHeaderColor,
+                        ],
+                      ),
+                    ),
+                    child: Center(
+                      child: DefaultTextStyle(
+                        style: Theme.of(context).textTheme.bodyMedium!,
+                        child: LayoutBuilder(
+                          builder:
+                              (
+                                BuildContext context,
+                                BoxConstraints viewportConstraints,
+                              ) {
+                                return SingleChildScrollView(
+                                  child: ConstrainedBox(
+                                    constraints: BoxConstraints(
+                                      minHeight: viewportConstraints.maxHeight,
+                                    ),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        _isTimerVisible
+                                            ? InkWell(
+                                                onTap: () {
+                                                  setState(() {
+                                                    _isTimerVisible =
+                                                        !_isTimerVisible;
+                                                  });
+                                                },
+                                                child: CustomTimer(
+                                                  controller: _controller,
+                                                  builder: (state, remaining) {
+                                                    return Container(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                            bottom: 2.0,
+                                                          ),
+                                                      alignment:
+                                                          Alignment.center,
+                                                      width: double.infinity,
+                                                      height: 30,
+                                                      color:
+                                                          Colors.red.shade300,
+                                                      child: Text(
+                                                        "${remaining.hours}:${remaining.minutes}:${remaining.seconds}.${remaining.milliseconds}",
+                                                        style: Theme.of(context)
+                                                            .appBarTheme
+                                                            .titleTextStyle
+                                                            ?.copyWith(
+                                                              fontSize: 20,
+                                                              fontFamily:
+                                                                  'Quicksand',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
+                                                            ),
+                                                      ),
+                                                    );
+                                                  },
+                                                ),
+                                              )
+                                            : InkWell(
+                                                onTap: () {
+                                                  setState(() {
+                                                    _isTimerVisible =
+                                                        !_isTimerVisible;
+                                                    _controller.reset();
+                                                  });
+                                                },
+                                                child: Container(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                        bottom: 2.0,
+                                                      ),
+                                                  alignment: Alignment.center,
+                                                  width: double.infinity,
+                                                  height: 30,
+                                                  color: Colors.red.shade300,
+                                                  child: Text(
+                                                    'stopwatch25Seconds'.tr(),
+                                                    style: Theme.of(context)
+                                                        .appBarTheme
+                                                        .titleTextStyle
+                                                        ?.copyWith(
+                                                          fontSize: 20,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                        TextQuestion(
+                                          textQuestion:
+                                              widget.mockGameData!.question!,
+                                        ),
+                                        const SizedBox(height: 5.0),
+                                        OptionABook(
+                                          nameBook: widget.nameBook!,
+                                          book: widget.mockGameData!,
+                                        ),
+                                        const SizedBox(height: 5.0),
+                                        OptionBBook(
+                                          nameBook: widget.nameBook!,
+                                          book: widget.mockGameData!,
+                                        ),
+                                        const SizedBox(height: 5.0),
+                                        OptionCBook(
+                                          nameBook: widget.nameBook!,
+                                          book: widget.mockGameData!,
+                                        ),
+                                        const SizedBox(height: 8.0),
+                                        const TextValueScore(),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
                         ),
-                    icon: const Icon(Icons.volume_up),
-                  ),
-                  IconButton(
-                    onPressed: widget.nextQuestion,
-                    icon: const Icon(Icons.arrow_forward),
-                  ),
-                ],
+                      ),
+                    ),
+                  );
+                },
               ),
             ),
+          )
+        : Scaffold(
             body: LayoutBuilder(
               builder: (ctx, constraints) {
                 return Container(
@@ -3257,161 +3659,37 @@ class _BookQuestionsState extends State<BookQuestions>
                     ),
                   ),
                   child: Center(
-                    child: DefaultTextStyle(
-                      style: Theme.of(context).textTheme.bodyMedium!,
-                      child: LayoutBuilder(
-                        builder: (
-                          BuildContext context,
-                          BoxConstraints viewportConstraints,
-                        ) {
-                          return SingleChildScrollView(
-                            child: ConstrainedBox(
-                              constraints: BoxConstraints(
-                                minHeight: viewportConstraints.maxHeight,
-                              ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  _isTimerVisible
-                                      ? InkWell(
-                                        onTap: () {
-                                          setState(() {
-                                            _isTimerVisible = !_isTimerVisible;
-                                          });
-                                        },
-                                        child: CustomTimer(
-                                          controller: _controller,
-                                          builder: (state, remaining) {
-                                            return Container(
-                                              padding: const EdgeInsets.only(
-                                                bottom: 2.0,
-                                              ),
-                                              alignment: Alignment.center,
-                                              width: double.infinity,
-                                              height: 30,
-                                              color: Colors.red.shade300,
-                                              child: Text(
-                                                "${remaining.hours}:${remaining.minutes}:${remaining.seconds}.${remaining.milliseconds}",
-                                                style: Theme.of(context)
-                                                    .appBarTheme
-                                                    .titleTextStyle
-                                                    ?.copyWith(
-                                                      fontSize: 20,
-                                                      fontFamily: 'Quicksand',
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                    ),
-                                              ),
-                                            );
-                                          },
-                                        ),
-                                      )
-                                      : InkWell(
-                                        onTap: () {
-                                          setState(() {
-                                            _isTimerVisible = !_isTimerVisible;
-                                            _controller.reset();
-                                          });
-                                        },
-                                        child: Container(
-                                          padding: const EdgeInsets.only(
-                                            bottom: 2.0,
-                                          ),
-                                          alignment: Alignment.center,
-                                          width: double.infinity,
-                                          height: 30,
-                                          color: Colors.red.shade300,
-                                          child: Text(
-                                            'stopwatch25Seconds'.tr(),
-                                            style: Theme.of(context)
-                                                .appBarTheme
-                                                .titleTextStyle
-                                                ?.copyWith(fontSize: 20),
-                                          ),
-                                        ),
-                                      ),
-                                  TextQuestion(
-                                    textQuestion:
-                                        widget.mockGameData!.question!,
-                                  ),
-                                  const SizedBox(height: 5.0),
-                                  OptionABook(
-                                    nameBook: widget.nameBook!,
-                                    book: widget.mockGameData!,
-                                  ),
-                                  const SizedBox(height: 5.0),
-                                  OptionBBook(
-                                    nameBook: widget.nameBook!,
-                                    book: widget.mockGameData!,
-                                  ),
-                                  const SizedBox(height: 5.0),
-                                  OptionCBook(
-                                    nameBook: widget.nameBook!,
-                                    book: widget.mockGameData!,
-                                  ),
-                                  const SizedBox(height: 8.0),
-                                  const TextValueScore(),
-                                ],
-                              ),
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 20, right: 20, bottom: 4),
+                      child: AutoSizeText(
+                        'thereAreNoQuestions'.tr(),
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'FredokaOne',
+                          fontSize: 40, //constraints!.maxHeight * 0.06,
+                          shadows: [
+                            Shadow(
+                              blurRadius: 7.0,
+                              color: Colors.black,
+                              offset: Offset(1.0, 1.0),
                             ),
-                          );
-                        },
+                          ],
+                        ),
+                        maxLines: 1,
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
                 );
               },
             ),
-          ),
-        )
-        : Scaffold(
-          body: LayoutBuilder(
-            builder: (ctx, constraints) {
-              return Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topRight,
-                    end: Alignment.bottomLeft,
-                    colors: [
-                      Theme.of(context).secondaryHeaderColor,
-                      Theme.of(context).primaryColor,
-                      Theme.of(context).secondaryHeaderColor,
-                    ],
-                  ),
-                ),
-                child: Center(
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 20, right: 20, bottom: 4),
-                    child: AutoSizeText(
-                      'thereAreNoQuestions'.tr(),
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'FredokaOne',
-                        fontSize: 40, //constraints!.maxHeight * 0.06,
-                        shadows: [
-                          Shadow(
-                            blurRadius: 7.0,
-                            color: Colors.black,
-                            offset: Offset(1.0, 1.0),
-                          ),
-                        ],
-                      ),
-                      maxLines: 1,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-              );
-            },
-          ),
-        );
+          );
   }
 
   Future<void> _speak(String text, BuildContext context) async {
-    final countryCode =
-        EasyLocalization.of(context)?.currentLocale?.countryCode;
+    final countryCode = EasyLocalization.of(
+      context,
+    )?.currentLocale?.countryCode;
 
     if (kDebugMode) {
       print(countryCode);

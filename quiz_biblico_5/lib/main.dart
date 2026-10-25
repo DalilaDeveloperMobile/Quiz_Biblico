@@ -13,18 +13,15 @@ import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_di
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_difficult/sub_screens/answer_a_level_difficult/answer_a_level_difficult.dart';
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_difficult/sub_screens/answer_b_level_difficult/answer_b_level_difficult.dart';
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_difficult/sub_screens/answer_c_level_difficult/answer_c_level_difficult.dart';
-import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_difficult/sub_screens/choose_number_level_difficult.dart';
 
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_easy/questions_level_easy.dart';
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_easy/sub_screens/answer_b_level_easy/answer_b_level_easy.dart';
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_easy/sub_screens/answer_a_level_easy/answer_a_level_easy.dart';
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_easy/sub_screens/answer_c_level_easy/answer_c_level_easy.dart';
-import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_easy/sub_screens/choose_number_level_easy.dart';
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_medium/questions_level_medium.dart';
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_medium/sub_screens/answer_a_level_medium/answer_a_level_medium.dart';
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_medium/sub_screens/answer_b_level_medium/answer_b_level_medium.dart';
 import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_medium/sub_screens/answer_c_level_medium/answer_c_level_medium.dart';
-import 'package:quiz_biblico_5/screens/level_game/sub_screens/questions_level_medium/sub_screens/choose_number_level_medium.dart';
 
 import 'package:quiz_biblico_5/screens/random_game/sub_screens/random_questions/random_questions.dart';
 import 'package:quiz_biblico_5/screens/random_game/sub_screens/random_answer/random_answer_a/random_answer_a.dart';
@@ -116,31 +113,29 @@ class _MyAppState extends State<MyApp> {
         AppRoutes.alternative1Random: (ctx) => const RandomAnswerA(),
         AppRoutes.alternative2Random: (ctx) => const RandomAnswerB(),
         AppRoutes.alternative3Random: (ctx) => const RandomAnswerC(),
+
         // Routes Level Easy
-        AppRoutes.levelEasy: (ctx) => const ChooseNumberLevelEasy(),
         AppRoutes.questionsLevelEasy: (ctx) => const QuestionsLevelEasy(),
         AppRoutes.alternative1LevelEasy: (ctx) => const AnswerALevelEasy(),
         AppRoutes.alternative2LevelEasy: (ctx) => const AnswerBLevelEasy(),
         AppRoutes.alternative3LevelEasy: (ctx) => const AnswerCLevelEasy(),
         // Routes Level Medium
-        AppRoutes.levelMedium: (ctx) => const ChooseNumberLevelMedium(),
         AppRoutes.questionsLevelMedium: (ctx) => const QuestionsLevelMedium(),
         AppRoutes.alternative1LevelMedium: (ctx) => const AnswerALevelMedium(),
         AppRoutes.alternative2LevelMedium: (ctx) => const AnswerBLevelMedium(),
         AppRoutes.alternative3LevelMedium: (ctx) => const AnswerCLevelMedium(),
         // Routes Level Difficult
-        AppRoutes.levelDifficult: (ctx) => const ChooseNumberLevelDifficult(),
-        AppRoutes.questionsLevelDifficult:
-            (ctx) => const QuestionsLevelDifficult(),
-        AppRoutes.alternative1LevelDifficult:
-            (ctx) => const AnswerALevelDifficult(),
-        AppRoutes.alternative2LevelDifficult:
-            (ctx) => const AnswerBLevelDifficult(),
-        AppRoutes.alternative3LevelDifficult:
-            (ctx) => const AnswerCLevelDifficult(),
+        AppRoutes.questionsLevelDifficult: (ctx) =>
+            const QuestionsLevelDifficult(),
+        AppRoutes.alternative1LevelDifficult: (ctx) =>
+            const AnswerALevelDifficult(),
+        AppRoutes.alternative2LevelDifficult: (ctx) =>
+            const AnswerBLevelDifficult(),
+        AppRoutes.alternative3LevelDifficult: (ctx) =>
+            const AnswerCLevelDifficult(),
         // Routes Books
         // Routes Book Genesis
-        AppRoutes.bookGenesis: (ctx) => const ChooseNumberBooks(),
+        AppRoutes.bookGenesis: (ctx) => ChooseNumberBooks(),
         AppRoutes.questionsBookGenesis: (ctx) => const QuestionsBooks(),
         AppRoutes.alternative1BookGenesis: (ctx) => const AnswerABook(),
         AppRoutes.alternative2BookGenesis: (ctx) => const AnswerBBook(),
